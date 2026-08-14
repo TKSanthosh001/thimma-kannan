@@ -1,6 +1,6 @@
 export const en = {
   // Brand Slogans & Meta
-  tagline: "You have the list. We take care of the arrangements.",
+  tagline: "Have the list from your priest? Send it to us. We'll take care of the arrangements.",
   subTagline: "Have the list from your priest? Send it to us. We'll take care of the arrangements.",
   heroSubtext: "Simply send us the pooja or ceremony material list provided by your Iyer or priest. We'll arrange the required items, pack everything together and have it ready for delivery or collection.",
 
@@ -27,10 +27,17 @@ export const en = {
     contactUsPrice: "Contact for pricing details"
   },
 
-  // Value Proposition / Story Block
-  valueProp: {
-    title: "Tired of visiting multiple shops for every single item?",
-    desc: "A ceremony material list given by your priest can be long and overwhelming. You don't need to visit multiple shops searching for items. Simply send your list to Thimma Kannan, and we will arrange all required materials for you."
+  // Customer Story / Problem Section
+  story: {
+    problemTitle: "Need to visit multiple shops searching for ceremony items?",
+    problemSubtitle: "Simply send the list given by your Iyer or priest to us on WhatsApp.",
+    flowSteps: [
+      { step: "01", label: "List", desc: "List written by your Priest" },
+      { step: "02", label: "Send", desc: "Send it via WhatsApp" },
+      { step: "03", label: "Arrange", desc: "We source all items" },
+      { step: "04", label: "Pack", desc: "We pack everything systematically" },
+      { step: "05", label: "Deliver", desc: "Delivery or store pickup" }
+    ]
   },
 
   // About Section
@@ -49,15 +56,15 @@ export const en = {
 
   // Workflow Section
   workflow: {
-    subtitle: "4 simple steps to receive your arranged ceremony kit",
-    title: "From Your Priest List to Your Doorstep",
+    subtitle: "Simple steps to receive your prepared ceremony material kit",
+    title: "How It Works",
     ctaTitle: "Have Your Priest Material List Ready?",
     ctaDesc: "Take a photo of your list and send it via WhatsApp. We will evaluate it and arrange all required materials.",
     steps: [
-      { num: "1", title: "You Have the List", desc: "Keep the material list written by your Iyer or priest ready." },
-      { num: "2", title: "Send on WhatsApp", desc: "Send a photo or details of the list to us on WhatsApp." },
-      { num: "3", title: "We Arrange Everything", desc: "We source and organize all required items carefully." },
-      { num: "4", title: "Receive or Collect", desc: "Get it delivered or collect directly from our Madurai shop." }
+      { num: "01", title: "Your Priest's List", desc: "Keep the material list written by your Iyer or priest ready." },
+      { num: "02", title: "Send on WhatsApp", desc: "Send a photo or details of the list to us on WhatsApp." },
+      { num: "03", title: "We Arrange Everything", desc: "We source and organize all required items carefully." },
+      { num: "04", title: "Receive or Collect", desc: "Get it delivered or collect directly from our Madurai shop." }
     ]
   },
 
@@ -74,7 +81,7 @@ export const en = {
     noResults: "No items match your search. Send your priest list on WhatsApp and we will arrange them."
   },
 
-  // Why Choose Us
+  // Why Choose Us / Trust
   whyChoose: {
     title: "Save Time. Focus on Your Ceremony.",
     reasons: [
@@ -111,6 +118,12 @@ export const en = {
         a: "Phone & WhatsApp: 9043461987. Address: 48B, Chinna Kadai Street, South Gate, Madurai - 625001."
       }
     ]
+  },
+
+  // Final CTA
+  finalCta: {
+    title: "Have the List Ready?",
+    desc: "Send it to us on WhatsApp. We'll take complete care of the material arrangements."
   },
 
   // Contact Section

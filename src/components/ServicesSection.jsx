@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData } from '../config/services';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { getImageUrl } from '../utils/image';
 import { MessageSquare, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const ServicesSection = ({ onSelectService }) => {
@@ -9,10 +10,10 @@ export const ServicesSection = ({ onSelectService }) => {
 
   return (
     <section id="services" className="py-20 md:py-28 bg-main transition-colors border-b border-color">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 space-y-16">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-saffron block">
             {lang === 'ta' ? 'எங்களின் சேவைகள்' : 'Our Ceremonial Sourcing'}
           </span>
@@ -24,24 +25,25 @@ export const ServicesSection = ({ onSelectService }) => {
           </p>
         </div>
 
-        {/* Spacious 2x2 Editorial Services Grid */}
+        {/* Editorial Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {servicesData.map((service) => {
             const title = service.title[lang];
             const shortDesc = service.shortDesc[lang];
             const badge = service.badge[lang];
             const isFuneral = service.id === 'funeral-rituals';
+            const imgPath = getImageUrl(service.image);
 
             return (
               <div
                 key={service.id}
-                className="card flex flex-col justify-between p-0 overflow-hidden border-2 border-color hover:border-saffron group shadow-md transition-all"
+                className="bg-card flex flex-col justify-between rounded-3xl overflow-hidden border-2 border-color hover:border-saffron group shadow-md transition-all"
               >
                 <div>
-                  {/* Large High-Res Service Image */}
+                  {/* Large Image Block */}
                   <div className="relative h-64 sm:h-72 overflow-hidden">
                     <img
-                      src={service.image}
+                      src={imgPath}
                       alt={title}
                       className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${
                         isFuneral ? 'grayscale-[30%]' : ''
@@ -54,7 +56,7 @@ export const ServicesSection = ({ onSelectService }) => {
                     )}
                   </div>
 
-                  {/* Card Narrative */}
+                  {/* Narrative Body */}
                   <div className="p-8 space-y-4">
                     <h3 className="text-2xl font-bold font-heading text-primary group-hover:text-maroon dark:group-hover:text-gold transition-colors">
                       {title}
@@ -77,7 +79,7 @@ export const ServicesSection = ({ onSelectService }) => {
                   </div>
                 </div>
 
-                {/* Bottom Action Bar */}
+                {/* Bottom Action Buttons */}
                 <div className="p-8 pt-0 flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => onSelectService(service)}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
 import { getWhatsAppUrl, getGeneralWhatsAppMessage } from '../utils/whatsapp';
+import { getImageUrl } from '../utils/image';
 import { MessageSquare, ArrowDown, CheckCircle2 } from 'lucide-react';
 
 export const Hero = () => {
@@ -37,15 +38,15 @@ export const Hero = () => {
               <span>{lang === 'ta' ? 'பாரம்பரிய சடங்கு & பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Sourcing Service'}</span>
             </div>
 
-            {/* Large Expressive Headline */}
+            {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-primary leading-[1.15] tracking-tight">
               <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
               <span className="text-primary font-bold">
-                {t.subTagline}
+                {t.tagline}
               </span>
             </h1>
 
-            {/* Generous Supporting Paragraph */}
+            {/* Supporting Paragraph */}
             <p className="text-base md:text-xl text-secondary max-w-2xl leading-relaxed">
               {t.heroSubtext}
             </p>
@@ -81,7 +82,7 @@ export const Hero = () => {
                 </div>
                 <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
-                  <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Sourcing All Items'}</span>
+                  <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Source All Items'}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
@@ -92,11 +93,11 @@ export const Hero = () => {
 
           </div>
 
-          {/* Right Large Hero Visual Image (Loaded static local asset) */}
+          {/* Right Hero Visual Image */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-saffron/30 group">
               <img
-                src="/images/hero_pooja_banner.jpg"
+                src={getImageUrl('/images/hero_pooja_banner.jpg')}
                 alt="Thimma Kannan Traditional Pooja Setup"
                 fetchpriority="high"
                 className="w-full h-[360px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"

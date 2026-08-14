@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { packagesData } from '../config/packages';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { getImageUrl } from '../utils/image';
 import { MessageSquare, ArrowRight, Check, Sparkles } from 'lucide-react';
 
 export const PackagesSection = ({ onSelectPackage }) => {
@@ -9,10 +10,10 @@ export const PackagesSection = ({ onSelectPackage }) => {
 
   return (
     <section id="packages" className="py-20 md:py-28 bg-secondary transition-colors border-b border-color">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 space-y-16">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-saffron block">
             {lang === 'ta' ? 'சிறப்பு தொகுப்புகள்' : 'Prepared Bundles'}
           </span>
@@ -32,13 +33,14 @@ export const PackagesSection = ({ onSelectPackage }) => {
             const title = pkg.title[lang];
             const desc = pkg.desc[lang];
             const items = pkg.itemsList[lang];
+            const imgPath = getImageUrl(pkg.image);
 
             return (
-              <div key={pkg.id} className="card p-0 flex flex-col justify-between border-2 border-color hover:border-saffron overflow-hidden shadow-md group transition-all">
+              <div key={pkg.id} className="bg-card rounded-3xl overflow-hidden flex flex-col justify-between border-2 border-color hover:border-saffron group shadow-md transition-all">
                 <div>
                   <div className="relative h-56 overflow-hidden">
                     <img
-                      src={pkg.image}
+                      src={imgPath}
                       alt={title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -56,7 +58,7 @@ export const PackagesSection = ({ onSelectPackage }) => {
                       {desc}
                     </p>
 
-                    <div className="bg-tertiary p-4 rounded-xl space-y-2 border border-color">
+                    <div className="bg-tertiary p-4 rounded-2xl space-y-2 border border-color">
                       <p className="text-[11px] font-bold text-primary uppercase tracking-wider mb-2">
                         {lang === 'ta' ? 'முக்கிய பொருட்கள்:' : 'Key Included Items:'}
                       </p>

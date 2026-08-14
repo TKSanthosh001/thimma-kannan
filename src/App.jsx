@@ -5,7 +5,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { SEOHead } from './components/SEOHead';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { ProblemSection } from './components/ProblemSection';
+import { CustomerStory } from './components/CustomerStory';
 import { ServicesSection } from './components/ServicesSection';
 import { ServiceModal } from './components/ServiceModal';
 import { HowItWorks } from './components/HowItWorks';
@@ -37,13 +37,13 @@ export const App = () => {
             {/* 1. HERO */}
             <Hero />
 
-            {/* 2. THE PROBLEM & SOLUTION NARRATIVE */}
-            <ProblemSection />
+            {/* 2. CUSTOMER STORY (PROBLEM -> SOLUTION FLOW) */}
+            <CustomerStory />
 
-            {/* 3. OUR CEREMONY SERVICES */}
+            {/* 3. CEREMONY SERVICES */}
             <ServicesSection onSelectService={(service) => setSelectedService(service)} />
 
-            {/* 4. HOW IT WORKS WORKFLOW */}
+            {/* 4. HOW IT WORKS */}
             <HowItWorks />
 
             {/* 5. POPULAR CEREMONY PACKAGES */}
