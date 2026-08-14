@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
-import { getWhatsAppUrl, getFormWhatsAppMessage, getGeneralWhatsAppMessage } from '../utils/whatsapp';
-import { MessageSquare, Phone, MapPin, Clock, Send, Navigation, CheckCircle } from 'lucide-react';
+import { getWhatsAppUrl, getFormWhatsAppMessage } from '../utils/whatsapp';
+import { Phone, MessageSquare, MapPin, Send, Clock } from 'lucide-react';
 
 export const ContactSection = () => {
   const { lang, t } = useLanguage();
@@ -13,120 +13,68 @@ export const ContactSection = () => {
     preferredDate: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const whatsappMsg = getFormWhatsAppMessage(formData, lang);
-    const waUrl = getWhatsAppUrl(whatsappMsg);
-    setSubmitted(true);
-    
-    setTimeout(() => {
-      window.open(waUrl, '_blank', 'noopener,noreferrer');
-    }, 300);
+    const waUrl = getWhatsAppUrl(getFormWhatsAppMessage(formData, lang));
+    window.open(waUrl, '_blank');
   };
 
   return (
-    <section id="contact" className="py-16 bg-secondary transition-colors border-t border-color">
-      <div className="container mx-auto space-y-12">
+    <section id="contact" className="py-16 md:py-20 bg-main transition-colors border-b border-color">
+      <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-saffron">
-            {lang === 'ta' ? 'தொடர்பு கொள்ளுங்கள்' : 'Get In Touch'}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-maroon dark:text-gold">
-            {t.contact.title}
-          </h2>
-          <p className="text-base md:text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
-            {t.contact.subtitle}
-          </p>
-          <div className="pt-2 flex flex-wrap justify-center gap-3">
-            <a
-              href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp text-sm py-3 px-6 shadow-md font-bold"
-            >
-              <MessageSquare className="w-5 h-5" />
-              <span>{t.buttons.sendListWhatsApp}</span>
-            </a>
-            <a
-              href={`tel:${businessConfig.phone}`}
-              className="btn btn-outline text-sm py-3 px-6"
-            >
-              <Phone className="w-5 h-5" />
-              <span>{t.buttons.callNow}: {businessConfig.phone}</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Grid: Form & Contact Info with Google Map */}
+        {/* 2-Column Desktop Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
-          {/* Left Column: Interactive Form */}
-          <div className="lg:col-span-6 card p-6 md:p-8 border-2 border-saffron/30 shadow-xl space-y-6">
+          {/* Left Form */}
+          <div className="lg:col-span-6 bg-card rounded-3xl p-8 border border-color shadow-sm space-y-6">
             <div>
-              <h3 className="text-xl font-bold font-heading text-maroon dark:text-gold mb-1">
+              <h2 className="text-2xl font-bold font-heading text-primary">
                 {t.contact.formTitle}
-              </h3>
-              <p className="text-xs text-secondary">
+              </h2>
+              <p className="text-xs text-secondary mt-1">
                 {t.contact.formSub}
               </p>
             </div>
 
-            {submitted && (
-              <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                <span>
-                  {lang === 'ta'
-                    ? 'உங்கள் பட்டியல் தகவல் தயாராகிவிட்டது. WhatsApp திறக்கிறது...'
-                    : 'List message generated! Opening WhatsApp...'}
-                </span>
-              </div>
-            )}
-
             <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-secondary mb-1">
+                  {t.contact.fields.name}
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder={t.contact.placeholders.name}
+                  className="form-input"
+                  required
+                />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-primary mb-1">
-                    {t.contact.fields.name} *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder={t.contact.placeholders.name}
-                    className="form-input text-xs"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-primary mb-1">
-                    {t.contact.fields.phone} *
+                  <label className="block text-xs font-bold text-secondary mb-1">
+                    {t.contact.fields.phone}
                   </label>
                   <input
                     type="tel"
                     name="phone"
-                    required
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder={t.contact.placeholders.phone}
-                    className="form-input text-xs"
+                    className="form-input"
+                    required
                   />
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-primary mb-1">
+                  <label className="block text-xs font-bold text-secondary mb-1">
                     {t.contact.fields.functionType}
                   </label>
                   <input
@@ -135,27 +83,13 @@ export const ContactSection = () => {
                     value={formData.functionType}
                     onChange={handleChange}
                     placeholder={t.contact.placeholders.functionType}
-                    className="form-input text-xs"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-primary mb-1">
-                    {t.contact.fields.preferredDate}
-                  </label>
-                  <input
-                    type="text"
-                    name="preferredDate"
-                    value={formData.preferredDate}
-                    onChange={handleChange}
-                    placeholder={t.contact.placeholders.preferredDate}
-                    className="form-input text-xs"
+                    className="form-input"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-primary mb-1">
+                <label className="block text-xs font-bold text-secondary mb-1">
                   {t.contact.fields.message}
                 </label>
                 <textarea
@@ -164,13 +98,13 @@ export const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder={t.contact.placeholders.message}
-                  className="form-input text-xs resize-none"
-                ></textarea>
+                  className="form-input resize-none"
+                />
               </div>
 
               <button
                 type="submit"
-                className="btn btn-whatsapp w-full text-sm py-3.5 font-bold shadow-md hover:scale-[1.01] transition-transform"
+                className="btn btn-whatsapp w-full py-3.5 text-sm font-extrabold shadow-md flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
                 <span>{t.contact.submitBtn}</span>
@@ -178,58 +112,52 @@ export const ContactSection = () => {
             </form>
           </div>
 
-          {/* Right Column: Shop Details & Google Map */}
-          <div className="lg:col-span-6 space-y-6 flex flex-col justify-between">
-            <div className="card p-6 border border-color space-y-4 shadow-sm">
-              <h3 className="text-xl font-bold font-heading text-primary border-b border-color pb-2">
+          {/* Right Shop Details & Map */}
+          <div className="lg:col-span-6 space-y-6">
+            <div className="bg-card rounded-3xl p-8 border border-color shadow-sm space-y-4">
+              <h3 className="text-2xl font-bold font-heading text-maroon dark:text-gold">
                 {t.contact.shopInfo}
               </h3>
 
-              <div className="space-y-3.5 text-sm text-secondary">
+              <div className="space-y-3.5 text-xs md:text-sm text-secondary">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-saffron flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-primary">{lang === 'ta' ? 'கடை முகவரி:' : 'Shop Address:'}</p>
-                    <p>{businessConfig.address[lang]}</p>
+                    <span className="font-bold text-primary block">{businessConfig.businessName[lang]}</span>
+                    <span>{businessConfig.address[lang]}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-primary">{lang === 'ta' ? 'தொலைபேசி & WhatsApp:' : 'Phone & WhatsApp:'}</p>
-                    <a href={`tel:${businessConfig.phone}`} className="hover:text-saffron font-medium">
-                      {businessConfig.phone}
-                    </a>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-saffron flex-shrink-0" />
+                  <a href={`tel:${businessConfig.phone}`} className="font-bold text-primary hover:underline">
+                    {businessConfig.phone}
+                  </a>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-primary">{lang === 'ta' ? 'கடை நேரம்:' : 'Opening Hours:'}</p>
-                    <p>{businessConfig.businessHours[lang]}</p>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <MessageSquare className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <a
+                    href={getWhatsAppUrl(getFormWhatsAppMessage(formData, lang))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-emerald-600 hover:underline"
+                  >
+                    +{businessConfig.whatsapp}
+                  </a>
                 </div>
-              </div>
 
-              <div className="pt-2">
-                <a
-                  href={businessConfig.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary text-xs py-2.5 px-4 inline-flex items-center gap-1.5"
-                >
-                  <Navigation className="w-4 h-4" />
-                  <span>{lang === 'ta' ? 'கூகுள் மேப் வழித்தடம்' : 'Google Maps Directions'}</span>
-                </a>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-saffron flex-shrink-0" />
+                  <span>{businessConfig.businessHours[lang]}</span>
+                </div>
               </div>
             </div>
 
-            {/* Google Map Frame */}
-            <div className="h-64 rounded-xl overflow-hidden border border-color shadow-md relative">
+            {/* Embedded Google Map */}
+            <div className="rounded-3xl overflow-hidden border border-color shadow-sm h-56 bg-tertiary">
               <iframe
-                title="Thimma Kannan Madurai Location Map"
+                title="Thimma Kannan Shop Location"
                 src={businessConfig.googleMapsEmbed}
                 width="100%"
                 height="100%"
@@ -237,7 +165,7 @@ export const ContactSection = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </div>
           </div>
 

@@ -6,15 +6,11 @@ import { SEOHead } from './components/SEOHead';
 import { Header } from './components/Header';
 import { TamilFestivalBanner } from './components/TamilFestivalBanner';
 import { Hero } from './components/Hero';
-import { TrustBadgesBar } from './components/TrustBadgesBar';
-import { CustomerStory } from './components/CustomerStory';
-import { IyerHomamListResolver } from './components/IyerHomamListResolver';
-import { AuthenticityGuaranteeSection } from './components/AuthenticityGuaranteeSection';
-import { ServicesSection } from './components/ServicesSection';
-import { MaterialPhotoCarousel } from './components/MaterialPhotoCarousel';
+import { WhatWeDo } from './components/WhatWeDo';
+import { ServicesCarousel } from './components/ServicesCarousel';
 import { ServiceModal } from './components/ServiceModal';
 import { HowItWorks } from './components/HowItWorks';
-import { MaterialsSection } from './components/MaterialsSection';
+import { MaterialsCarousel } from './components/MaterialsCarousel';
 import { MaterialModal } from './components/MaterialModal';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { FAQSection } from './components/FaqSection';
@@ -42,29 +38,17 @@ export const App = () => {
             {/* 1. HERO */}
             <Hero />
 
-            {/* 1.5 TRUST PILLARS BAR */}
-            <TrustBadgesBar />
+            {/* 2. WHAT WE DO */}
+            <WhatWeDo />
 
-            {/* 2. CUSTOMER STORY (PROBLEM -> SOLUTION FLOW) */}
-            <CustomerStory />
-
-            {/* 2.5 IYER & HOMAM SAMAGRI LIST RESOLVER */}
-            <IyerHomamListResolver />
-
-            {/* 2.8 AUTHENTICITY & QUALITY GUARANTEE */}
-            <AuthenticityGuaranteeSection />
-
-            {/* 3. CEREMONY SERVICES */}
-            <ServicesSection onSelectService={(service) => setSelectedService(service)} />
-
-            {/* 3.5 MATERIAL & ARRANGEMENT PHOTO SHOWCASE CAROUSEL */}
-            <MaterialPhotoCarousel />
+            {/* 3. SERVICES CAROUSEL (CAROUSEL 1) */}
+            <ServicesCarousel onSelectService={(service) => setSelectedService(service)} />
 
             {/* 4. HOW IT WORKS */}
             <HowItWorks />
 
-            {/* 5. MATERIALS CATALOGUE */}
-            <MaterialsSection onSelectMaterial={(mat) => setSelectedMaterial(mat)} />
+            {/* 5. MATERIAL EXAMPLES CAROUSEL (CAROUSEL 2) */}
+            <MaterialsCarousel onSelectMaterial={(mat) => setSelectedMaterial(mat)} />
 
             {/* 6. WHY THIMMA KANNAN */}
             <WhyChooseUs />
@@ -72,14 +56,14 @@ export const App = () => {
             {/* 7. FAQ */}
             <FAQSection />
 
-            {/* 8. FINAL WHATSAPP CONVERSION CTA */}
+            {/* 8. FINAL WHATSAPP CTA */}
             <FinalCTA />
 
-            {/* 9. CONTACT & LOCATION */}
+            {/* 9. CONTACT */}
             <ContactSection />
           </main>
           
-          {/* FOOTER */}
+          {/* 10. FOOTER */}
           <Footer />
 
           {/* FLOATING WHATSAPP BUTTON */}
