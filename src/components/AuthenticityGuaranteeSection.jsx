@@ -107,11 +107,9 @@ export const AuthenticityGuaranteeSection = () => {
             
             {/* Left: Quote */}
             <div className="lg:col-span-8 space-y-4">
-              <div className="flex items-center gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                ))}
-                <span className="text-xs font-bold text-amber-200 ml-2">4.9 / 5.0 (1,200+ Reviews)</span>
+              <div className="inline-flex items-center gap-1.5 bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/30 text-amber-300 text-xs font-bold">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>{lang === 'ta' ? 'மதுரை தெற்கு வாசல் பாரம்பரிய சேவை' : 'South Gate Madurai Traditional Service'}</span>
               </div>
 
               <Quote className="w-10 h-10 text-amber-400/30" />
