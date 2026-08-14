@@ -4,22 +4,22 @@ import { getWhatsAppUrl, getGeneralWhatsAppMessage } from '../utils/whatsapp';
 import { MessageSquare } from 'lucide-react';
 
 export const FloatingWhatsApp = () => {
-  const { lang, t } = useLanguage();
-  const waUrl = getWhatsAppUrl(getGeneralWhatsAppMessage(lang));
+  const { lang } = useLanguage();
 
   return (
-    <a
-      href={waUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 md:p-4 rounded-full shadow-2xl flex items-center gap-2.5 hover:scale-110 transition-transform whatsapp-pulse group"
-      aria-label="WhatsApp Contact"
-      title="WhatsApp Enquiry / தொடர்புகொள்ள"
-    >
-      <MessageSquare className="w-6 h-6 fill-current" />
-      <span className="hidden sm:inline font-bold text-xs pr-1">
-        {t.buttons.enquireWhatsApp}
-      </span>
-    </a>
+    <div className="fixed bottom-5 right-5 z-40">
+      <a
+        href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs py-2.5 px-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all border border-white/20"
+        title="WhatsApp-ல் உங்கள் பட்டியலை அனுப்புங்கள்"
+      >
+        <MessageSquare className="w-4 h-4 shrink-0" />
+        <span className="hidden sm:inline">
+          {lang === 'ta' ? 'WhatsApp-ல் பட்டியல் அனுப்ப' : 'Send List'}
+        </span>
+      </a>
+    </div>
   );
 };

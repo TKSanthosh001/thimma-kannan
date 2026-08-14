@@ -38,7 +38,7 @@ export const WhyChooseUs = () => {
             {lang === 'ta' ? 'சிறப்பம்சங்கள்' : 'Why Choose Us'}
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-maroon dark:text-gold">
-            {lang === 'ta' ? 'ஏன் திருமா கண்ணன்?' : 'Why Choose Thimma Kannan?'}
+            {lang === 'ta' ? 'ஏன் திம்மா கண்ணன்?' : 'Why Choose Thimma Kannan?'}
           </h2>
         </div>
 
