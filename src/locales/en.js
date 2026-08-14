@@ -83,7 +83,7 @@ export const en = {
 
   // Why Choose Us / Trust
   whyChoose: {
-    title: "Save Time. Focus on Your Ceremony.",
+    title: "Why Thimma Kannan?",
     reasons: [
       { title: "No Multiple Shop Visits", desc: "Send us one list on WhatsApp instead of hunting across markets." },
       { title: "List-Based Material Sourcing", desc: "We prepare exact materials according to your priest's list." },
