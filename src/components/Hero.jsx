@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
 import { getWhatsAppUrl, getGeneralWhatsAppMessage } from '../utils/whatsapp';
-import { MessageSquare, Phone, ChevronRight, Sparkles } from 'lucide-react';
+import { MessageSquare, Phone, ChevronRight, FileCheck } from 'lucide-react';
 
 export const Hero = () => {
   const { lang, t } = useLanguage();
@@ -16,14 +16,14 @@ export const Hero = () => {
           {/* Text Content Column */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-saffron text-xs md:text-sm font-semibold">
-              <Sparkles className="w-4 h-4" />
-              <span>{lang === 'ta' ? 'பாரம்பரிய பூஜா பொருட்கள் சேவை' : 'Authentic South Indian Ritual Materials'}</span>
+              <FileCheck className="w-4 h-4" />
+              <span>{lang === 'ta' ? 'பட்டியல் உங்களிடம். பொருட்கள் ஏற்பாடு எங்களிடம்.' : 'Have the list? Leave the arrangements to us.'}</span>
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight text-primary leading-tight">
               <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
               <span className="text-2xl md:text-3xl lg:text-4xl text-saffron font-medium block">
-                {t.tagline}
+                {lang === 'ta' ? 'உங்கள் பூஜை பொருட்கள் பட்டியல் எங்களிடம் அனுப்புங்கள்.' : 'Send us your priest list. We arrange everything.'}
               </span>
             </h1>
 
@@ -37,15 +37,15 @@ export const Hero = () => {
                 href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp text-sm py-3 px-5 shadow-lg hover:scale-105 transition-transform"
+                className="btn btn-whatsapp text-sm md:text-base py-3.5 px-6 shadow-lg hover:scale-105 transition-transform font-bold"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>{t.buttons.enquireWhatsApp}</span>
+                <span>{t.buttons.sendListWhatsApp}</span>
               </a>
 
               <Link
                 to="/services"
-                className="btn btn-primary text-sm py-3 px-5"
+                className="btn btn-primary text-sm py-3.5 px-5"
               >
                 <span>{t.buttons.exploreServices}</span>
                 <ChevronRight className="w-4 h-4" />
@@ -53,26 +53,26 @@ export const Hero = () => {
 
               <a
                 href={`tel:${businessConfig.phone}`}
-                className="btn btn-outline text-sm py-3 px-4"
+                className="btn btn-outline text-sm py-3.5 px-4"
               >
                 <Phone className="w-4 h-4" />
                 <span>{t.buttons.callNow}</span>
               </a>
             </div>
 
-            {/* Micro Highlights */}
+            {/* Value Highlights */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-color">
               <div>
-                <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">100% Pure</h3>
-                <p className="text-xs text-muted">{lang === 'ta' ? 'தூய்மையான பொருட்கள்' : 'Authentic Ingredients'}</p>
+                <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">1 List</h3>
+                <p className="text-xs text-muted">{lang === 'ta' ? 'ஒரே பட்டியல் போதுமானது' : 'Just send your priest list'}</p>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">Priest List</h3>
-                <p className="text-xs text-muted">{lang === 'ta' ? 'ஐயர் பட்டியல் படி பேக்கிங்' : 'Packed Per Priest List'}</p>
+                <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">0 Hassle</h3>
+                <p className="text-xs text-muted">{lang === 'ta' ? 'பல கடைகளுக்கு அலைய வேண்டாம்' : 'No visiting multiple shops'}</p>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">WhatsApp</h3>
-                <p className="text-xs text-muted">{lang === 'ta' ? 'உடனடி விசாரணை' : 'Instant Order Support'}</p>
+                <p className="text-xs text-muted">{lang === 'ta' ? 'உடனடி பட்டியல் மதிப்பீடு' : 'Instant list evaluation'}</p>
               </div>
             </div>
           </div>
@@ -85,13 +85,13 @@ export const Hero = () => {
                 alt="Thimma Kannan Traditional Pooja Setup"
                 className="w-full h-80 sm:h-96 lg:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent flex items-end p-6">
                 <div className="text-white space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-wider text-amber-300">
-                    {lang === 'ta' ? 'தெய்வீக பாரம்பரியம்' : 'Devotional Visual'}
+                    {lang === 'ta' ? 'பாரம்பரிய சேவை' : 'Ceremony Material Arrangements'}
                   </p>
                   <p className="text-sm font-medium">
-                    {lang === 'ta' ? 'அனைத்து சடங்குகளுக்கான பூரண பூஜா தொகுப்புகள்' : 'Complete Material Packages for Every Hindu Ceremony'}
+                    {lang === 'ta' ? 'உங்கள் ஐயர் கொடுத்த பட்டியலின்படி அனைத்து பொருட்களும் ஏற்பாடு செய்து தரப்படும்' : 'All required items arranged strictly per your priest material list'}
                   </p>
                 </div>
               </div>

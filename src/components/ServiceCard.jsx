@@ -71,10 +71,10 @@ export const ServiceCard = ({ service }) => {
           href={getWhatsAppUrl(service.whatsappMessage[lang])}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-whatsapp text-xs py-2.5 px-3 flex-1 text-center"
+          className="btn btn-whatsapp text-xs py-2.5 px-3 flex-1 text-center font-semibold"
         >
           <MessageSquare className="w-3.5 h-3.5" />
-          <span>WhatsApp</span>
+          <span>{lang === 'ta' ? 'பட்டியலை அனுப்ப' : 'Send List'}</span>
         </a>
       </div>
     </div>

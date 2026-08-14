@@ -1,9 +1,9 @@
-// English Locale Dictionary
+// English Locale Dictionary (Corrected Business Messaging)
 export const en = {
   // Brand & Meta
   brandName: 'Thimma Kannan',
-  tagline: 'Your Trusted Partner for Every Traditional Ceremony',
-  heroSubtext: 'Complete material packages for Poojavaagal, Homams, House Warming, Weddings & Funeral/Dead-Kaariyam ceremonies strictly customized as per your priest item list.',
+  tagline: 'Have the list? Leave the arrangements to us.',
+  heroSubtext: 'Simply send us the pooja or ceremony material list given by your Iyer or priest. We\'ll arrange the required items, pack everything together and have it ready for delivery or collection.',
   
   // Navigation
   nav: {
@@ -14,18 +14,19 @@ export const en = {
     materials: 'Materials Catalogue',
     workflow: 'How It Works',
     contact: 'Contact Us',
-    whatsappAction: 'WhatsApp Enquiry',
+    whatsappAction: 'Send List',
     callNow: 'Call Now'
   },
 
   // Actions & Buttons
   buttons: {
-    exploreServices: 'Explore Services',
-    enquireWhatsApp: 'Enquire on WhatsApp',
+    exploreServices: 'Explore Our Services',
+    sendListWhatsApp: 'Send Your List on WhatsApp',
+    enquireWhatsApp: 'Send List on WhatsApp',
     callNow: 'Call Now',
     viewDetails: 'View Details',
-    whatsappRequirement: 'WhatsApp Your Requirement',
-    sendEnquiry: 'Submit Enquiry via WhatsApp',
+    whatsappRequirement: 'Send Your List on WhatsApp',
+    sendEnquiry: 'Send Your List on WhatsApp',
     contactUsPrice: 'Contact us for price',
     filterAll: 'All Items',
     searchPlaceholder: 'Search materials...',
@@ -35,111 +36,117 @@ export const en = {
   // About Section
   about: {
     title: 'About Thimma Kannan',
-    subtitle: 'Traditional Knowledge & Customer Trust',
-    p1: 'Thimma Kannan is a trusted South Indian family business providing complete ritual material packages for Poojavaagal, Homams, House Warming, Marriage functions, and all traditional religious ceremonies.',
-    p2: 'Simply share the list given by your family priest / Iyer with us via WhatsApp. We meticulously source, verify, and pack every item neatly so your ceremony proceeds smoothly without any hassle.',
+    subtitle: 'One List. Everything You Need.',
+    p1: 'No need to visit multiple shops and collect every item separately. Simply send us the list provided by your Iyer or priest. We\'ll arrange the required materials and prepare everything together for you.',
+    p2: 'Thimma Kannan specializes in taking the hassle out of ceremony preparations. Send us your priest\'s handwritten or typed list, and we arrange and pack all required pure items neatly for pickup or delivery.',
     features: [
-      { title: 'Complete Ceremony Packages', desc: 'From small daily poojas to grand weddings and traditional rituals.' },
-      { title: 'Convenient WhatsApp Ordering', desc: 'Send a photo of your priest list and receive instant response.' },
-      { title: 'Authentically Sourced Materials', desc: 'Pure, unadulterated ritual ingredients prepared traditionally.' },
-      { title: 'Delivery & Collection Support', desc: 'Neatly organized boxes delivered directly or available for pickup.' }
+      { title: 'Arranged Per Priest List', desc: 'We source items strictly matching the list given by your family priest.' },
+      { title: 'Convenient WhatsApp Ordering', desc: 'Send a photo of your list on WhatsApp and get immediate confirmation.' },
+      { title: 'No Visiting Multiple Shops', desc: 'Avoid running around searching for hard-to-find ritual herbs and items.' },
+      { title: 'Delivery & Collection Support', desc: 'Pick up your neatly organized package at the shop or get it delivered.' }
     ]
+  },
+
+  // Value Proposition Section
+  valueProp: {
+    title: 'One List. Everything You Need.',
+    desc: 'No need to visit multiple shops and collect every item separately. Simply send us the list provided by your Iyer or priest. We\'ll arrange the required materials and prepare everything together for you.'
   },
 
   // Services Section
   servicesSection: {
-    title: 'Our Main Services',
-    subtitle: 'Comprehensive ritual packages for all auspicious & traditional ceremonies',
+    title: 'Our Ceremonial Material Services',
+    subtitle: 'Material arrangement services for all traditional Hindu ceremonies',
     viewAll: 'View All Services'
   },
 
-  // Workflow Section ("Give Us the List")
+  // Workflow Section ("Send Us Your List")
   workflow: {
-    title: 'Give Us the List. We\'ll Take Care of the Rest.',
-    subtitle: '4 Simple steps to get your ceremony materials hassle-free',
+    title: 'Send Your List — We\'ll Take Care of the Rest.',
+    subtitle: 'Send the pooja or ceremony material list given by your Iyer or priest on WhatsApp. We\'ll arrange everything required for you.',
     steps: [
-      { num: '1', title: 'Share Your Requirement', desc: 'Send your priest list via WhatsApp photo or text message.' },
-      { num: '2', title: 'We Prepare Your Items', desc: 'We source pure ingredients and inspect each item for scriptural compliance.' },
-      { num: '3', title: 'We Pack Everything', desc: 'Items are packaged sequentially according to ritual order.' },
-      { num: '4', title: 'Get It Delivered / Collect', desc: 'Convenient doorstep delivery or quick collection from shop.' }
+      { num: '1', title: '01 – You Have the List', desc: 'Keep the material list provided by your Iyer or priest ready.' },
+      { num: '2', title: '02 – Send It to Us', desc: 'Send a photo or copy of the list through WhatsApp.' },
+      { num: '3', title: '03 – We Arrange Everything', desc: 'We source the required materials and pack them together according to the list.' },
+      { num: '4', title: '04 – Receive or Collect', desc: 'Get the prepared package delivered to you or collect it from the shop.' }
     ],
     ctaTitle: 'Have a Priest List Ready?',
-    ctaDesc: 'WhatsApp us a picture of your list now for a quick itemized quote and guidance.'
+    ctaDesc: 'Send a photo of your list on WhatsApp now for quick material arrangement guidance.'
   },
 
   // Why Choose Us
   whyChoose: {
     title: 'Why Choose Thimma Kannan?',
     reasons: [
-      { title: 'Traditional Expertise', desc: 'Deep understanding of South Indian ritual requirements and sub-sect traditions.' },
-      { title: 'Zero Hassle Sourcing', desc: 'No need to run between multiple shops searching for rare ritual herbs.' },
-      { title: 'Fair & Transparent Pricing', desc: 'High quality materials supplied at honest, transparent rates.' },
-      { title: 'Dignified & Respectful Service', desc: 'Compassionate handling for auspicious ceremonies and funeral rituals alike.' }
+      { title: 'Strict List Compliance', desc: 'Every item on your priest list is verified and arranged carefully.' },
+      { title: 'Zero Hassle Sourcing', desc: 'No running around between multiple shops searching for rare herbs.' },
+      { title: 'Fair & Honest Rates', desc: 'Quality ritual ingredients supplied at fair, transparent rates.' },
+      { title: 'Dignified Handling', desc: 'Respectful, compassionate service for auspicious functions and funeral rites alike.' }
     ]
   },
 
   // Catalog Section
   catalog: {
     title: 'Product & Material Catalogue',
-    subtitle: 'Browse ritual items by category and enquire directly on WhatsApp',
+    subtitle: 'Is this item on your ceremony list? Ask us on WhatsApp to include it in your package',
     noResults: 'No materials found matching your search.'
   },
 
   // Contact Page & Form
   contact: {
     title: 'Contact Us',
-    subtitle: 'Reach out to us via Phone or WhatsApp anytime',
+    subtitle: 'Have your ceremony material list ready? Send it to us on WhatsApp.',
     shopInfo: 'Shop Information',
-    formTitle: 'Ceremony Requirement Enquiry Form',
-    formSub: 'Fill in the details below to format a structured WhatsApp message',
+    formTitle: 'Material List Submission Form',
+    formSub: 'Fill in the details below to format a structured WhatsApp list message',
     fields: {
       name: 'Your Name',
       phone: 'Phone Number',
       functionType: 'Ceremony / Function Type',
       preferredDate: 'Ceremony Date',
-      message: 'Items Required / Specific Details'
+      message: 'Priest List Details / Notes'
     },
     placeholders: {
       name: 'e.g., Santhosh',
-      phone: 'e.g., 9876543210',
+      phone: 'e.g., 9043461987',
       functionType: 'e.g., Gruhapravesam / Ganapathi Homam',
       preferredDate: 'DD/MM/YYYY',
-      message: 'Attach priest list details or questions...'
+      message: 'Details from priest list or notes...'
     },
-    submitBtn: 'Send Enquiry on WhatsApp',
+    submitBtn: 'Send Your List on WhatsApp',
     locationTitle: 'Shop Location & Directions'
   },
 
   // FAQs
   faq: {
     title: 'Frequently Asked Questions (FAQ)',
-    subtitle: 'Clear answers about our services and packing process',
+    subtitle: 'Clear answers about list arrangements and packing',
     items: [
       {
         q: 'Can I send a photo of the list given by my priest/Iyer on WhatsApp?',
         a: 'Yes, absolutely! You can send a picture of your handwritten or typed priest list directly to our WhatsApp number.'
       },
       {
-        q: 'Do you provide complete packages for House Warming & Marriage?',
-        a: 'Yes, we prepare all-inclusive packages for Gruhapravesam, Ganapathi Homam, Weddings, Seemantham, and all traditional ceremonies.'
+        q: 'I have a material list. Will you arrange all the items for me?',
+        a: 'Based on your list and item availability, we source all required materials and pack them together into a complete package.'
       },
       {
-        q: 'Are Funeral & 16th-day Karumathi materials available quickly?',
-        a: 'Yes, during sorrowful times, we provide immediate, compassionate support by arranging all required funeral and Karumathi items promptly.'
+        q: 'Do I need to visit multiple shops to buy pooja items?',
+        a: 'No! Simply send us your list, and we help arrange all the required items under one roof so you don\'t have to run around.'
       },
       {
-        q: 'Do you deliver to home locations?',
-        a: 'We offer doorstep delivery support within our service coverage areas. Contact us on WhatsApp for delivery arrangements.'
+        q: 'Can I send the list for Funeral / 16th-Day Karumathi rites?',
+        a: 'Yes, during difficult times, we arrange all required funeral and Karumathi items promptly and respectfully per priest instructions.'
       }
     ]
   },
 
   // Footer
   footer: {
-    desc: 'Trusted provider of complete devotional and traditional ritual material packages in South India.',
+    desc: 'You have the list. Leave the arrangements to us. Trusted traditional pooja material arrangement service in Madurai.',
     quickLinks: 'Quick Links',
     contactInfo: 'Contact Details',
     rights: 'All Rights Reserved.',
-    disclaimer: 'Thimma Kannan - Traditional Pooja Material Services.'
+    disclaimer: 'Thimma Kannan - Traditional Ceremony Material Arrangements.'
   }
 };

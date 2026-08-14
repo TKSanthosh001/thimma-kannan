@@ -1,23 +1,26 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { getWhatsAppUrl, getGeneralWhatsAppMessage } from '../utils/whatsapp';
-import { MessageSquare, FileText, CheckCircle, Package, Truck, ArrowRight } from 'lucide-react';
+import { MessageSquare, FileText, Send, CheckCircle, Package, ArrowRight } from 'lucide-react';
 
 export const WorkflowSection = () => {
   const { lang, t } = useLanguage();
 
   const stepIcons = [
     <FileText className="w-6 h-6 text-saffron" />,
-    <CheckCircle className="w-6 h-6 text-maroon dark:text-gold" />,
-    <Package className="w-6 h-6 text-saffron" />,
-    <Truck className="w-6 h-6 text-maroon dark:text-gold" />
+    <Send className="w-6 h-6 text-maroon dark:text-gold" />,
+    <CheckCircle className="w-6 h-6 text-saffron" />,
+    <Package className="w-6 h-6 text-maroon dark:text-gold" />
   ];
 
   return (
     <section className="py-16 bg-gradient-to-br from-amber-500/10 via-background to-amber-500/5 transition-colors border-y border-color">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-2xl md:text-4xl font-extrabold font-heading text-maroon dark:text-gold mb-3 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-saffron">
+            {lang === 'ta' ? 'சுலபமான 4 படிகள்' : 'Simple 4-Step Process'}
+          </span>
+          <h2 className="text-2xl md:text-4xl font-extrabold font-heading text-maroon dark:text-gold leading-tight">
             "{t.workflow.title}"
           </h2>
           <p className="text-secondary text-base md:text-lg">
@@ -69,10 +72,10 @@ export const WorkflowSection = () => {
               href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-whatsapp text-base py-3.5 px-8 shadow-xl inline-flex items-center gap-2 hover:scale-105 transition-transform"
+              className="btn btn-whatsapp text-base py-3.5 px-8 shadow-xl inline-flex items-center gap-2 hover:scale-105 transition-transform font-bold"
             >
               <MessageSquare className="w-6 h-6" />
-              <span className="font-bold">{t.buttons.whatsappRequirement}</span>
+              <span>{t.buttons.sendListWhatsApp}</span>
             </a>
           </div>
         </div>

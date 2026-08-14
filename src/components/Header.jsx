@@ -49,7 +49,7 @@ export const Header = () => {
               {businessConfig.businessName[lang]}
             </h1>
             <p className="text-xs text-secondary dark:text-muted hidden sm:block">
-              {lang === 'ta' ? 'பாரம்பரிய பூஜா பொருட்கள்' : 'Traditional Ritual Material Package'}
+              {lang === 'ta' ? 'பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Arrangements'}
             </p>
           </div>
         </Link>
@@ -100,10 +100,10 @@ export const Header = () => {
             href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp text-xs py-2 px-3"
+            className="btn btn-whatsapp text-xs py-2 px-3.5 font-bold"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>WhatsApp</span>
+            <span>{t.nav.whatsappAction}</span>
           </a>
         </div>
 
@@ -158,10 +158,10 @@ export const Header = () => {
                 href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp w-full text-center"
+                className="btn btn-whatsapp w-full text-center font-bold"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>{t.buttons.enquireWhatsApp}</span>
+                <span>{t.buttons.sendListWhatsApp}</span>
               </a>
 
               <a

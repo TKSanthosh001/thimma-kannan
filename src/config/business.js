@@ -5,12 +5,12 @@ export const businessConfig = {
     en: 'Thimma Kannan'
   },
   tagline: {
-    ta: 'ஒவ்வொரு பாரம்பரிய நிகழ்விற்கும் தேவையான பொருட்கள் அனைத்தும் ஒரே இடத்தில்',
-    en: 'Your Trusted Partner for Every Traditional Ceremony'
+    ta: 'பட்டியல் உங்களிடம். பொருட்கள் ஏற்பாடு எங்களிடம்.',
+    en: 'Have the list? Leave the arrangements to us.'
   },
   subTagline: {
-    ta: 'பூஜை, ஹோமம், கிரகப்பிரவேசம், திருமணம் மற்றும் அனைத்து சடங்குகளுக்குமான முழுமையான பொருட்கள்',
-    en: 'Complete ritual material packages for Poojavaagal, Homams, House-Warming, Weddings & Traditional Functions.'
+    ta: 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து, ஒரே தொகுப்பாக தயார் செய்து தருகிறோம்.',
+    en: 'Simply send us the pooja or ceremony material list given by your Iyer or priest. We arrange the required items, pack everything together and have it ready for delivery or collection.'
   },
 
   // Contact Information

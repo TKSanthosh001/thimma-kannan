@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ShieldCheck, PackageCheck, HeartHandshake, Truck } from 'lucide-react';
+import { FileText, ShoppingBag, ShieldCheck, Truck } from 'lucide-react';
 
 export const AboutSection = () => {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
 
   const featureIcons = [
-    <PackageCheck className="w-6 h-6 text-maroon dark:text-gold" />,
-    <HeartHandshake className="w-6 h-6 text-saffron" />,
+    <FileText className="w-6 h-6 text-maroon dark:text-gold" />,
+    <ShoppingBag className="w-6 h-6 text-saffron" />,
     <ShieldCheck className="w-6 h-6 text-maroon dark:text-gold" />,
     <Truck className="w-6 h-6 text-saffron" />
   ];
@@ -15,18 +15,23 @@ export const AboutSection = () => {
   return (
     <section className="py-16 bg-secondary transition-colors">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold font-heading text-primary mb-3">
-            {t.about.title}
+        
+        {/* Strong Value Proposition Banner */}
+        <div className="bg-card border-2 border-saffron/40 rounded-2xl p-8 mb-12 shadow-md text-center max-w-4xl mx-auto space-y-3">
+          <h2 className="text-2xl md:text-4xl font-extrabold font-heading text-maroon dark:text-gold">
+            {t.valueProp.title}
           </h2>
-          <p className="text-saffron font-medium text-base md:text-lg">
-            {t.about.subtitle}
+          <p className="text-secondary text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            {t.valueProp.desc}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Text Explanation */}
           <div className="lg:col-span-6 space-y-4 text-secondary leading-relaxed text-base">
+            <h3 className="text-xl md:text-2xl font-bold font-heading text-primary">
+              {t.about.title}
+            </h3>
             <p className="bg-card p-5 rounded-xl border border-color shadow-sm">
               {t.about.p1}
             </p>
@@ -54,6 +59,7 @@ export const AboutSection = () => {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

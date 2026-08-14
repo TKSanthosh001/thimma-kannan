@@ -84,7 +84,7 @@ export const ServiceDetail = () => {
             <div className="bg-card p-6 rounded-xl border border-color space-y-4 shadow-sm">
               <h2 className="text-xl font-bold font-heading text-primary border-b border-color pb-2 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-saffron" />
-                <span>{lang === 'ta' ? 'இச்சேவையில் அடங்கியுள்ள பொருட்கள்:' : 'What This Service Includes:'}</span>
+                <span>{lang === 'ta' ? 'பட்டியலின்படி திரட்டப்படும் முக்கிய பொருட்கள்:' : 'Key Materials Arranged Per List:'}</span>
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -101,12 +101,12 @@ export const ServiceDetail = () => {
             <div className="bg-tertiary p-6 rounded-xl border-2 border-saffron/40 space-y-3">
               <div className="flex items-center gap-2 text-saffron font-bold font-heading text-lg">
                 <Info className="w-5 h-5" />
-                <span>{lang === 'ta' ? 'பிரத்யேக ஐயர் பட்டியல் சேவை' : 'Custom Priest List Requirement'}</span>
+                <span>{lang === 'ta' ? 'உங்கள் பூஜை பொருட்கள் பட்டியல் தயாரா?' : 'Have Your Priest List Ready?'}</span>
               </div>
               <p className="text-xs md:text-sm text-secondary leading-relaxed">
                 {lang === 'ta'
-                  ? 'உங்கள் குடும்ப வழக்கப்படி மற்றும் ஐயர்/சாஸ்திரிகள் தரும் தனிப்பட்ட பட்டியலின் படியும் அனைத்துப் பொருட்களும் நேர்த்தியாகத் தயாரித்து தரப்படும். பட்டியலின் புகைப்படத்தை WhatsApp-ல் அனுப்பலாம்.'
-                  : 'We strictly arrange materials custom-tailored to your sub-sect traditions and exact priest list. Simply share your handwritten list photo on WhatsApp.'}
+                  ? 'Iyer / Priest கொடுத்த பட்டியலை WhatsApp-ல் அனுப்புங்கள். தேவையான பொருட்கள் அனைத்தையும் ஒரே தொகுப்பாக ஏற்பாடு செய்து தருகிறோம்.'
+                  : 'Simply send us the pooja or ceremony material list given by your Iyer or priest. We arrange the required items and pack everything together.'}
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export const ServiceDetail = () => {
             {relatedPackages.length > 0 && (
               <div className="space-y-4 pt-4">
                 <h2 className="text-xl font-bold font-heading text-primary">
-                  {lang === 'ta' ? 'இச்சேவைக்கான சிறப்பு பேக்கேஜ்கள்' : 'Related Ceremony Packages'}
+                  {lang === 'ta' ? 'இச்சேவைக்கான தயார் தொகுப்புகள்' : 'Prepared Ceremony Packages'}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {relatedPackages.map((pkg) => (
@@ -129,12 +129,12 @@ export const ServiceDetail = () => {
           <div className="lg:col-span-4 space-y-6">
             <div className="card p-6 sticky top-24 border-2 border-saffron text-center space-y-4 shadow-xl">
               <h3 className="text-xl font-bold font-heading text-primary">
-                {lang === 'ta' ? 'இச்சேவை பற்றி விசாரிக்க' : 'Enquire About This Service'}
+                {lang === 'ta' ? 'பட்டியலை WhatsApp-ல் அனுப்புங்கள்' : 'Send Your List on WhatsApp'}
               </h3>
               <p className="text-xs text-secondary leading-relaxed">
                 {lang === 'ta'
-                  ? 'உடனடியாக எங்களின் WhatsApp எண்ணிற்குச் செய்தி அனுப்பி விவரங்கள் மற்றும் மதிப்பீட்டைப் பெறலாம்.'
-                  : 'Get quick guidance, itemized pricing, and availability details via WhatsApp.'}
+                  ? 'உங்கள் ஐயர் கொடுத்த பட்டியலின் புகைப்படத்தை அனுப்பி தேவையான பொருட்களை உடனடி ஏற்பாடு செய்யுங்கள்.'
+                  : 'Send a photo of your priest list on WhatsApp to arrange your ceremony materials effortlessly.'}
               </p>
 
               <a
@@ -144,7 +144,7 @@ export const ServiceDetail = () => {
                 className="btn btn-whatsapp text-sm py-3.5 w-full font-bold shadow-lg"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>{t.buttons.enquireWhatsApp}</span>
+                <span>{t.buttons.sendListWhatsApp}</span>
               </a>
             </div>
           </div>
