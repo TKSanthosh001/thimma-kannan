@@ -40,20 +40,14 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Mukta Malar', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 17px;
-  }
-
-  @media (min-width: 768px) {
-    html {
-      font-size: 18px;
-    }
+    font-size: 16px; /* Standard web baseline */
   }
 
   body {
     background-color: var(--color-bg-main);
     color: var(--color-text-primary);
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 1rem; /* 16px standard */
+    line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -84,7 +78,7 @@
   display: inline-flex;
   items-center: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
@@ -115,7 +109,7 @@
 
 .btn-outline {
   background-color: transparent;
-  border: 1.5px solid var(--color-border);
+  border: 1px solid var(--color-border);
   color: var(--color-text-primary);
 }
 .btn-outline:hover {
@@ -126,12 +120,12 @@
 /* Forms */
 .form-input {
   width: 100%;
-  padding: 1rem 1.25rem;
-  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--color-border);
   background-color: var(--color-bg-card);
   color: var(--color-text-primary);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.5;
   outline: none;
   transition: border-color 0.2s;
