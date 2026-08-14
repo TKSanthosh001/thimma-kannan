@@ -39,10 +39,9 @@ export const Hero = () => {
             </div>
 
             {/* Headline */}
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-primary leading-[1.2] tracking-tight">
-              <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
-              <span className="text-slate-900 dark:text-slate-100 font-bold block">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading leading-[1.2] tracking-tight">
+              <span className="text-maroon block mb-2">{businessConfig.businessName[lang]}</span>
+              <span className="text-primary font-bold block">
                 {lang === 'ta'
                   ? 'உங்கள் பட்டியலை அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
                   : 'Send your list. We arrange all required materials.'}
@@ -50,7 +49,7 @@ export const Hero = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base md:text-xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+            <p className="text-base md:text-xl text-secondary font-medium leading-relaxed max-w-2xl">
               {lang === 'ta'
                 ? 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். பட்டியலில் உள்ள தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து, முறையாக தொகுத்து வழங்குகிறோம்.'
                 : 'Send the pooja material list given by your Iyer / Priest on WhatsApp. We source all required items, pack everything neatly, and have it ready for delivery or pickup.'}
@@ -72,23 +71,23 @@ export const Hero = () => {
                 <a
                   href="#services"
                   onClick={scrollToServices}
-                  className="text-xs md:text-sm font-bold text-amber-700 dark:text-amber-400 hover:underline inline-flex items-center gap-1.5 py-3 px-2"
+                  className="text-xs md:text-sm font-bold text-saffron hover:underline inline-flex items-center gap-1.5 py-3 px-2"
                 >
                   <span>{lang === 'ta' ? 'சேவைகளைப் பார்க்க ↓' : 'View Services ↓'}</span>
                 </a>
               </div>
 
               {/* 3 Concise Benefit Checks */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200 dark:border-slate-800 max-w-xl">
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-color max-w-xl">
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'Iyer பட்டியல் அனுப்புங்கள்' : 'Send Priest List'}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Source All Items'}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'Delivery / Collection' : 'Delivery & Pickup'}</span>
                 </div>

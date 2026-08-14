@@ -31,14 +31,14 @@ export const AuthenticityGuaranteeSection = () => {
             <Award className="w-4 h-4 text-amber-700" />
             <span>{lang === 'ta' ? '100% பாரம்பரிய தூய்மை உத்தரவாதம்' : '100% Authentic Devotional Guarantee'}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-maroon tracking-tight mb-4">
             {lang === 'ta' ? (
-              <>ஏன் மதுரை குடும்பங்கள் எங்களை <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">100% நம்புகிறார்கள்?</span></>
+              <>ஏன் மதுரை குடும்பங்கள் எங்களை <span className="text-saffron underline decoration-saffron/40 underline-offset-8">100% நம்புகிறார்கள்?</span></>
             ) : (
-              <>Why Madurai Families Trust <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">Thimma Kannan</span> 100%</>
+              <>Why Madurai Families Trust <span className="text-saffron underline decoration-saffron/40 underline-offset-8">Thimma Kannan</span> 100%</>
             )}
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-secondary text-base sm:text-lg leading-relaxed">
             {lang === 'ta'
               ? 'மதுரையில் கடை கடையாக அலைந்து டென்ஷன் ஆக வேண்டிய அவசியமில்லை. சந்தை விலைக்கு ஏற்ற நியாயமான விலையில், ஹோம நேரத்திற்கு முன்பே துல்லியமான விநியோகம்!'
               : 'No more running between multiple shops in Madurai! We deliver 100% accurate, priest-approved homam materials on time at fair, affordable market rates.'}
@@ -83,18 +83,18 @@ export const AuthenticityGuaranteeSection = () => {
           ].map((card, idx) => (
             <div 
               key={idx}
-              className="bg-white rounded-2xl p-6 shadow-md border border-amber-100/80 hover:shadow-xl transition-all relative overflow-hidden group hover:-translate-y-1"
+              className="bg-card rounded-2xl p-6 shadow-md border border-color hover:shadow-xl transition-all relative overflow-hidden group hover:-translate-y-1"
             >
-              <div className="text-4xl font-black text-amber-100 group-hover:text-amber-200 transition-colors absolute top-4 right-4 pointer-events-none">
+              <div className="text-4xl font-black text-saffron/20 group-hover:text-saffron/40 transition-colors absolute top-4 right-4 pointer-events-none">
                 {card.step}
               </div>
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center font-bold mb-4 group-hover:bg-amber-600 group-hover:text-white transition-all">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-saffron flex items-center justify-center font-bold mb-4 group-hover:bg-maroon group-hover:text-gold transition-all">
                 <CheckCircle2 className="w-5 h-5 stroke-[2.5]" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">
+              <h3 className="text-lg font-bold text-primary mb-2">
                 {card.title[lang]}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-secondary leading-relaxed">
                 {card.desc[lang]}
               </p>
             </div>

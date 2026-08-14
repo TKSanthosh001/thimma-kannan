@@ -37,7 +37,7 @@ export const ServicesSection = ({ onSelectService }) => {
             return (
               <div
                 key={service.id}
-                className="bg-white dark:bg-slate-900 flex flex-col justify-between rounded-2xl overflow-hidden border border-amber-200/80 dark:border-amber-500/20 hover:border-amber-400 group shadow-md hover:shadow-lg transition-all"
+                className="bg-card flex flex-col justify-between rounded-2xl overflow-hidden border border-color hover:border-saffron group shadow-md hover:shadow-lg transition-all"
               >
                 <div>
                   {/* Large Dominant Image */}
@@ -50,7 +50,7 @@ export const ServicesSection = ({ onSelectService }) => {
                       }`}
                     />
                     {badge && (
-                      <span className="absolute top-3 right-3 bg-amber-900/90 text-amber-100 font-bold text-[11px] px-3 py-1 rounded-full shadow-xs">
+                      <span className="absolute top-3 right-3 bg-maroon/90 text-gold font-bold text-[11px] px-3 py-1 rounded-full shadow-xs">
                         {badge}
                       </span>
                     )}
@@ -58,13 +58,13 @@ export const ServicesSection = ({ onSelectService }) => {
 
                   {/* Text Content */}
                   <div className="p-6 space-y-2">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 block">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-saffron block">
                       {lang === 'ta' ? 'சேவை வகை' : 'Service Category'}
                     </span>
-                    <h3 className="text-xl font-bold font-heading text-slate-900 dark:text-slate-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                    <h3 className="text-xl font-bold font-heading text-primary group-hover:text-saffron transition-colors">
                       {title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-sm text-secondary leading-relaxed line-clamp-3">
                       {shortDesc}
                     </p>
                   </div>
@@ -84,7 +84,7 @@ export const ServicesSection = ({ onSelectService }) => {
 
                   <button
                     onClick={() => onSelectService(service)}
-                    className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 font-semibold"
+                    className="text-xs text-secondary hover:text-primary font-semibold cursor-pointer"
                   >
                     {lang === 'ta' ? 'விவரங்கள்' : 'Details'}
                   </button>

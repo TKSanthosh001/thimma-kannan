@@ -86,23 +86,23 @@ export const MaterialsSection = ({ onSelectMaterial }) => {
               return (
                 <div 
                   key={item.id} 
-                  className="bg-white dark:bg-slate-900 rounded-2xl p-5 flex flex-col justify-between border border-amber-200/80 dark:border-amber-500/20 hover:border-amber-400 shadow-sm hover:shadow-md transition-all"
+                  className="bg-card rounded-2xl p-5 flex flex-col justify-between border border-color hover:border-saffron shadow-sm hover:shadow-md transition-all"
                 >
                   <div className="space-y-2">
-                    <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-2.5 py-0.5 rounded-full inline-block">
+                    <span className="text-[11px] font-bold text-saffron bg-amber-500/10 px-2.5 py-0.5 rounded-full inline-block">
                       {lang === 'ta' ? 'பூஜை சாமான்கள்' : 'Pooja Essential'}
                     </span>
 
-                    <h3 className="text-lg font-bold font-heading text-slate-900 dark:text-slate-100">
+                    <h3 className="text-lg font-bold font-heading text-primary">
                       {name}
                     </h3>
                     
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+                    <p className="text-xs sm:text-sm text-secondary leading-relaxed line-clamp-2">
                       {desc}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between gap-3 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
+                  <div className="flex items-center justify-between gap-3 pt-4 mt-4 border-t border-color">
                     <a
                       href={getWhatsAppUrl(item.whatsappMessage[lang])}
                       target="_blank"

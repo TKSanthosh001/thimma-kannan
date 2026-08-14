@@ -35,17 +35,17 @@ export const CustomerStory = () => {
 
           {/* Right: Text & 3 Small Supporting Points */}
           <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 block">
+            <span className="text-xs font-bold uppercase tracking-wider text-saffron block">
               {lang === 'ta' ? 'எளிமையான தீர்வு' : 'Simple Solution'}
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-maroon dark:text-gold leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-maroon leading-tight">
               {lang === 'ta'
                 ? 'பல கடைகளில் தேடி வாங்க வேண்டிய சிரமம் வேண்டாம்.'
                 : 'No need to search across multiple shops.'}
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+            <p className="text-base sm:text-lg text-primary font-medium leading-relaxed">
               {lang === 'ta'
                 ? 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
                 : 'Simply send the material list given by your Iyer / Priest on WhatsApp. We source all required items and pack everything together.'}
@@ -55,19 +55,19 @@ export const CustomerStory = () => {
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <span className="text-sm font-semibold text-primary">
                   {lang === 'ta' ? 'ஐயர் கொடுத்த பட்டியலை அப்படியே அனுப்புங்கள்' : 'Send your exact priest list as provided'}
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <span className="text-sm font-semibold text-primary">
                   {lang === 'ta' ? 'ஒவ்வொரு பொருளும் தனித்தனியாக பெயர் சீட்டுடன் பேக் செய்யப்படும்' : 'Every item is itemized and clearly labeled'}
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <span className="text-sm font-semibold text-primary">
                   {lang === 'ta' ? 'மதுரையில் கடை கடையாக அலைய வேண்டிய டென்ஷன் இல்லை' : 'No running around multiple shops in Madurai'}
                 </span>
               </div>

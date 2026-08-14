@@ -113,11 +113,11 @@ export const MaterialPhotoCarousel = () => {
             <span>{lang === 'ta' ? 'மாதிரி பொருட்கள் பார்வை' : 'Material Sourcing Showcase'}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-slate-100 tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-maroon tracking-tight mb-3">
             {lang === 'ta' ? 'பூஜை முதல் பாரம்பரிய சடங்குகள் வரை' : 'From Everyday Pooja to Sacred Rituals'}
           </h2>
 
-          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-secondary text-sm sm:text-base leading-relaxed">
             {lang === 'ta'
               ? 'உங்கள் Iyer / Priest கொடுத்த பட்டியலின் அடிப்படையில் தேவையான பூஜை மற்றும் சடங்கு பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
               : 'We source and arrange all required pooja and ceremony materials strictly based on the material list given by your Iyer or Priest.'}
@@ -132,7 +132,7 @@ export const MaterialPhotoCarousel = () => {
             {getVisibleItems().map((item, idx) => (
               <div 
                 key={`${item.id}-${idx}`} 
-                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-amber-200/80 dark:border-amber-500/20 shadow-md hover:shadow-lg transition-all group"
+                className="bg-card rounded-2xl overflow-hidden border border-color shadow-md hover:shadow-lg transition-all group"
               >
                 <div className="relative h-60 overflow-hidden">
                   <img
@@ -141,13 +141,13 @@ export const MaterialPhotoCarousel = () => {
                     loading={idx === 0 ? 'eager' : 'lazy'}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-3 right-3 bg-amber-950/80 backdrop-blur-xs text-amber-200 font-bold text-[11px] px-3 py-1 rounded-full border border-amber-400/30">
+                  <span className="absolute top-3 right-3 bg-maroon/90 backdrop-blur-xs text-gold font-bold text-[11px] px-3 py-1 rounded-full border border-gold/30">
                     {item.tag[lang]}
                   </span>
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-base font-bold font-heading text-slate-900 dark:text-slate-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                  <h3 className="text-base font-bold font-heading text-primary group-hover:text-saffron transition-colors">
                     {item.title[lang]}
                   </h3>
                 </div>

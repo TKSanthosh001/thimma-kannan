@@ -51,13 +51,13 @@ export const HowItWorks = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40 px-3 py-1 rounded-full mb-3 inline-block">
+          <span className="text-xs font-bold uppercase tracking-wider text-saffron bg-amber-500/10 px-3 py-1 rounded-full mb-3 inline-block">
             {lang === 'ta' ? 'எளிமையான செயல்முறை' : '4-Step Process'}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-slate-100 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-maroon tracking-tight">
             {lang === 'ta' ? 'எப்படி செயல்படுகிறது?' : 'How It Works'}
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg mt-2">
+          <p className="text-secondary text-base sm:text-lg mt-2">
             {lang === 'ta' 
               ? '4 எளிய படிகளில் உங்கள் சடங்கு பொருட்களை ஒரே இடத்தில் பெறுங்கள்'
               : 'Receive all your ceremony materials hassle-free in 4 simple steps'}
@@ -79,24 +79,24 @@ export const HowItWorks = () => {
               return (
                 <div 
                   key={idx} 
-                  className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-md border border-amber-200/80 dark:border-amber-500/20 hover:shadow-lg transition-all relative flex flex-col justify-between"
+                  className="bg-card rounded-2xl p-6 shadow-md border border-color hover:shadow-lg transition-all relative flex flex-col justify-between"
                 >
                   <div>
                     {/* Top Step Header */}
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 dark:text-amber-400 flex items-center justify-center font-bold border border-amber-500/20 shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-saffron flex items-center justify-center font-bold border border-saffron/20 shrink-0">
                         <Icon className="w-6 h-6" />
                       </div>
-                      <span className="text-3xl font-black font-heading text-amber-600/30 dark:text-amber-400/20">
+                      <span className="text-3xl font-black font-heading text-saffron/40">
                         {step.num}
                       </span>
                     </div>
 
                     {/* Step Title & Desc */}
-                    <h3 className="text-lg font-bold font-heading text-slate-900 dark:text-slate-100 mb-2">
+                    <h3 className="text-lg font-bold font-heading text-primary mb-2">
                       {step.title[lang]}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-secondary leading-relaxed">
                       {step.desc[lang]}
                     </p>
                   </div>
