@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 
 import { SEOHead } from './components/SEOHead';
 import { Header } from './components/Header';
+import { TamilFestivalBanner } from './components/TamilFestivalBanner';
 import { Hero } from './components/Hero';
 import { CustomerStory } from './components/CustomerStory';
 import { ServicesSection } from './components/ServicesSection';
@@ -32,6 +33,9 @@ export const App = () => {
         <div className="flex flex-col min-h-screen bg-main transition-colors text-primary font-body">
           {/* HEADER */}
           <Header />
+
+          {/* DYNAMIC TAMIL CALENDAR FESTIVAL BANNER */}
+          <TamilFestivalBanner />
 
           <main className="flex-grow">
             {/* 1. HERO */}
