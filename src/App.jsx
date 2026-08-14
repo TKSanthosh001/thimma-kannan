@@ -14,7 +14,7 @@ import { PackageModal } from './components/PackageModal';
 import { MaterialsSection } from './components/MaterialsSection';
 import { MaterialModal } from './components/MaterialModal';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { FAQSection } from './components/FAQSection';
+import { FAQSection } from './components/FaqSection';
 import { FinalCTA } from './components/FinalCTA';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
