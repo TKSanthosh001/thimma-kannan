@@ -1,20 +1,20 @@
-import { businessConfig } from '../config/business';
-
 export const generateLocalBusinessSchema = (lang = 'ta') => {
+  const siteUrl = 'https://tksanthosh001.github.io/thimma-kannan/';
+
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `${businessConfig.siteUrl}/#organization`,
+    "@id": `${siteUrl}#organization`,
     "name": "Thimma Kannan",
     "alternateName": "திம்மா கண்ணன்",
-    "url": businessConfig.siteUrl,
-    "logo": `${businessConfig.siteUrl}/images/hero_pooja_banner.jpg`,
-    "image": `${businessConfig.siteUrl}/images/hero_pooja_banner.jpg`,
+    "url": siteUrl,
+    "logo": `${siteUrl}images/hero_pooja_banner.jpg`,
+    "image": `${siteUrl}images/hero_pooja_banner.jpg`,
     "description": lang === 'ta'
-      ? "மதுரையில் பூஜை, ஹோமம், கிரகப்பிரவேசம், திருமணம் மற்றும் சடங்குகளுக்குத் தேவையான பொருட்களை உங்கள் பட்டியலின்படி ஏற்பாடு செய்யும் பாரம்பரிய நிறுவனம்."
+      ? "மதுரையில் பூஜை, ஹோமம், கிரகப்பிரவேசம், திருமணம் மற்றும் பாரம்பரிய சடங்குகள், இறுதி சடங்குகளுக்குத் தேவையான பொருட்களை உங்கள் பட்டியலின்படி ஏற்பாடு செய்யும் நிறுவனம்."
       : "Traditional ritual and pooja material sourcing service in South Gate, Madurai.",
-    "telephone": businessConfig.phoneRaw,
-    "email": businessConfig.email,
+    "telephone": "+91 90434 61987",
+    "email": "tksanthosh494@gmail.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -46,7 +46,7 @@ export const generateLocalBusinessSchema = (lang = 'ta') => {
       }
     ],
     "sameAs": [
-      businessConfig.siteUrl
+      siteUrl
     ]
   };
 };

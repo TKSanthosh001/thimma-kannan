@@ -17,8 +17,8 @@ export const SEOHead = () => {
       metaDescription.setAttribute(
         'content',
         lang === 'ta'
-          ? 'மதுரையில் பூஜை, ஹோமம், கிரகப்பிரவேசம், திருமணம் மற்றும் பாரம்பரிய சடங்குகளுக்குத் தேவையான பொருட்களை உங்கள் ஐயர் பட்டியலின்படி ஏற்பாடு செய்து தருகிறோம். தெற்கு வாசல், மதுரை.'
-          : 'Thimma Kannan Madurai provides hassle-free sourcing and arrangements for all pooja, homam, housewarming, wedding, and traditional ritual material lists. South Gate, Madurai.'
+          ? 'மதுரையில் பூஜை, ஹோமம், கிரகப்பிரவேசம், திருமணம் மற்றும் பாரம்பரிய சடங்குகள், இறுதி சடங்குகளுக்குத் தேவையான பொருட்களை உங்கள் பட்டியலின்படி ஏற்பாடு செய்து வழங்குகிறோம். தெற்கு வாசல், மதுரை.'
+          : 'Thimma Kannan Madurai provides hassle-free sourcing for all pooja, homam, housewarming, wedding, traditional family rituals, and final rite material lists. South Gate, Madurai.'
       );
     }
 
