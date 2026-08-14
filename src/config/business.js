@@ -1,6 +1,4 @@
-// Centralized Business Configuration for Thimma Kannan
-// Update business information in this single file
-
+// Centralized Business Configuration for Thimma Kannan (திம்மா கண்ணன்)
 export const businessConfig = {
   businessName: {
     ta: 'திம்மா கண்ணன்',
@@ -15,13 +13,13 @@ export const businessConfig = {
     en: 'Complete ritual material packages for Poojavaagal, Homams, House-Warming, Weddings & Traditional Functions.'
   },
 
-  // Contact Information Placeholders (Easily replaceable)
+  // Contact Information
   phone: '+91 98765 43210',
   whatsapp: '919876543210',
   email: 'contact@thimmakannan.com',
   address: {
-    ta: 'எண். 45, கோவில் தெரு, மயிலாப்பூர், சென்னை, தமிழ்நாடு - 600004',
-    en: 'No. 45, Temple Street, Mylapore, Chennai, Tamil Nadu - 600004'
+    ta: '48B, சின்ன கடை தெரு, தெற்கு வாசல், மதுரை - 625001',
+    en: '48B, Chinna Kadai Street, South Gate, Madurai - 625001'
   },
   
   businessHours: {
@@ -29,11 +27,11 @@ export const businessConfig = {
     en: 'Monday - Sunday: 6:00 AM - 9:00 PM'
   },
 
-  // Google Maps Location Embed & Link
-  googleMapsUrl: 'https://maps.google.com/?q=Mylapore+Temple+Street+Chennai',
-  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.994271810452!2d80.2678!3d13.0335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAyJzAwLjYiTiA4MMKwMTYnMDQuMSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
+  // Google Maps Location Embed & Link for Madurai South Gate
+  googleMapsUrl: 'https://maps.google.com/?q=48B+Chinna+Kadai+Street+South+Gate+Madurai+625001',
+  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.22271810452!2d78.118!3d9.914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5828!2sChinna+Kadai+St%2C+South+Gate%2C+Madurai%2C+Tamil+Nadu+625001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
 
   // SEO & Deployment Base Configuration
   siteUrl: 'https://tksanthosh001.github.io/thimma-kannan',
-  googleAnalyticsId: '', // Optional Google Analytics ID (leave empty if not configured)
+  googleAnalyticsId: '',
 };

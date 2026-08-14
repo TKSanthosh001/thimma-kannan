@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 :root {
   /* Light Devotional Theme (Default) */
@@ -82,12 +83,21 @@ body {
 /* Typography Utilities */
 h1, h2, h3, h4, .font-heading {
   font-family: var(--font-heading);
-  color: var(--text-primary);
 }
 
 .text-maroon { color: var(--accent-maroon); }
 .text-saffron { color: var(--accent-saffron); }
 .text-gold { color: var(--accent-gold); }
+
+.bg-main { background-color: var(--bg-main); }
+.bg-card { background-color: var(--bg-card); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.border-color { border-color: var(--border-color); }
 
 /* Buttons & Interactive Elements */
 .btn {
@@ -126,7 +136,7 @@ h1, h2, h3, h4, .font-heading {
 .btn-saffron:hover {
   background: linear-gradient(135deg, #B45309 0%, var(--accent-saffron) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.35);
 }
 
 .btn-whatsapp {
@@ -213,7 +223,7 @@ h1, h2, h3, h4, .font-heading {
   box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
 }
 
-/* Responsive Utilities */
+/* Container Utility */
 .container {
   width: 100%;
   max-width: 1240px;

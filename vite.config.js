@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: './', // Using relative base path ensures 100% compatibility with GitHub Pages
+  plugins: [
+    react(),
+    tailwindcss()
+  ],
+  base: '/thimma-kannan/', // Set absolute repository base path for GitHub Pages
   build: {
     outDir: 'dist',
     sourcemap: false
