@@ -3,7 +3,7 @@
 
 export const businessConfig = {
   businessName: {
-    ta: 'திருமா கண்ணன்',
+    ta: 'திம்மா கண்ணன்',
     en: 'Thimma Kannan'
   },
   tagline: {

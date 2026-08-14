@@ -17,7 +17,7 @@ export const packagesData = [
       en: ['Peepal Samithu', 'Pure Cow Ghee', 'Navadhanyam', 'Jaggery', 'Coconuts', 'Sambrani & Camphor', 'Turmeric & Kumkum']
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், கணபதி ஹோம பூரண பேக்கேஜ் ஆர்டர் / விவரங்கள் கேட்க விரும்புகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், கணபதி ஹோம பூரண பேக்கேஜ் ஆர்டர் / விவரங்கள் கேட்க விரும்புகிறேன்.',
       en: 'Hello Thimma Kannan, I would like to enquire about the Ganapathi Homam Complete Kit.'
     }
   },
@@ -38,7 +38,7 @@ export const packagesData = [
       en: ['Brass Kalasam set', 'Vastu Homam wood', 'Pooja coins', 'Mango leaves', 'Milk boiling pot', 'Auspicious items']
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், கிரகப்பிரவேச கிராண்ட் பேக் பற்றிய விவரங்களை அறிய விரும்புகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், கிரகப்பிரவேச கிராண்ட் பேக் பற்றிய விவரங்களை அறிய விரும்புகிறேன்.',
       en: 'Hello Thimma Kannan, please share details for the Gruhapravesam Grand Ceremony Pack.'
     }
   },
@@ -59,7 +59,7 @@ export const packagesData = [
       en: ['Decorated trays', 'Sandalwood & Rosewater set', 'Betel leaves & nuts', 'Turmeric roots', 'Sacred Kumkum']
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், நிச்சயதார்த்த மங்கள தொகுப்பு பற்றிய விபரம் தேவை.',
+      ta: 'வணக்கம் திம்மா கண்ணன், நிச்சயதார்த்த மங்கள தொகுப்பு பற்றிய விபரம் தேவை.',
       en: 'Hello Thimma Kannan, I am interested in the Nischayathartham Auspicious Package.'
     }
   },
@@ -80,7 +80,7 @@ export const packagesData = [
       en: ['Dharba grass', 'Black sesame seeds', 'Earthen pots', 'Pinda rice offerings', 'Sambrani & Sesame oil']
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், 16-ஆம் நாள் கருமாதி காரிய பேக் பற்றிய விவரங்கள் அறிய விரும்புகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், 16-ஆம் நாள் கருமாதி காரிய பேக் பற்றிய விவரங்கள் அறிய விரும்புகிறேன்.',
       en: 'Hello Thimma Kannan, please share details for the 16th-Day Karumathi Ritual Pack.'
     }
   }

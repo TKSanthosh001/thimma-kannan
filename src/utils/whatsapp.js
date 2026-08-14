@@ -16,7 +16,7 @@ export const getWhatsAppUrl = (messageText) => {
  */
 export const getGeneralWhatsAppMessage = (lang = 'ta') => {
   if (lang === 'ta') {
-    return `வணக்கம் திருமா கண்ணன்,\n\nஎங்களுக்கு ஒரு பூஜை / சுப நிகழ்ச்சிக்கான பொருட்கள் தேவைப்படுகிறது.\nவிவரங்களை அறிந்துகொள்ள விரும்புகிறோம்.`;
+    return `வணக்கம் திம்மா கண்ணன்,\n\nஎங்களுக்கு ஒரு பூஜை / சுப நிகழ்ச்சிக்கான பொருட்கள் தேவைப்படுகிறது.\nவிவரங்களை அறிந்துகொள்ள விரும்புகிறோம்.`;
   }
   return `Hello Thimma Kannan,\n\nI am interested in your traditional pooja and ceremony material packages.\nPlease share the details with me.`;
 };
@@ -28,7 +28,7 @@ export const getFormWhatsAppMessage = (formData, lang = 'ta') => {
   const { name, phone, functionType, preferredDate, message } = formData;
 
   if (lang === 'ta') {
-    return `வணக்கம் திருமா கண்ணன்,
+    return `வணக்கம் திம்மா கண்ணன்,
 
 *பூஜை தேவைக்கான புதிய கோரிக்கை:*
 

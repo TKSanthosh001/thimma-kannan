@@ -24,7 +24,7 @@ export const materialsData = [
     availability: true,
     price: null, // Shows "Contact us for price" per requirement
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், அரசு & ஆல் சமித்து விறகு கட்டு விலை / இருப்பை அறிய விரும்புகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், அரசு & ஆல் சமித்து விறகு கட்டு விலை / இருப்பை அறிய விரும்புகிறேன்.',
       en: 'Hello Thimma Kannan, I would like to enquire about Peepal & Banyan Samithu Wood Sticks.'
     }
   },
@@ -42,7 +42,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், பித்தளை பூஜா கலச சொம்பு பற்றி விசாரிக்க விரும்புகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், பித்தளை பூஜா கலச சொம்பு பற்றி விசாரிக்க விரும்புகிறேன்.',
       en: 'Hello Thimma Kannan, I want to enquire about the Brass Kalasam Pot.'
     }
   },
@@ -60,7 +60,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், நவதானிய பூஜா பேக் தேவையாக உள்ளது.',
+      ta: 'வணக்கம் திம்மா கண்ணன், நவதானிய பூஜா பேக் தேவையாக உள்ளது.',
       en: 'Hello Thimma Kannan, I would like to order Navadhanyam Pooja Kit.'
     }
   },
@@ -78,7 +78,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், ஹோமத்திற்கான சுத்தமான பசு நெய் பற்றி விசாரிக்கிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், ஹோமத்திற்கான சுத்தமான பசு நெய் பற்றி விசாரிக்கிறேன்.',
       en: 'Hello Thimma Kannan, enquiring about Pure Cow Ghee for Homam.'
     }
   },
@@ -96,7 +96,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், தர்பை புல் & கருப்பு எள் செட் தேவைப்படுகிறது.',
+      ta: 'வணக்கம் திம்மா கண்ணன், தர்பை புல் & கருப்பு எள் செட் தேவைப்படுகிறது.',
       en: 'Hello Thimma Kannan, I need Dharba Grass & Black Sesame Seeds Set.'
     }
   },
@@ -114,7 +114,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், இயற்கை சாம்பிராணி & பச்சை கற்பூரம் கிடைக்கிறதா?',
+      ta: 'வணக்கம் திம்மா கண்ணன், இயற்கை சாம்பிராணி & பச்சை கற்பூரம் கிடைக்கிறதா?',
       en: 'Hello Thimma Kannan, enquiring about Natural Sambrani & Camphor availability.'
     }
   },
@@ -132,7 +132,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், தாழம்பூ குங்குமம் & விரலி மஞ்சள் செட் தேவை.',
+      ta: 'வணக்கம் திம்மா கண்ணன், தாழம்பூ குங்குமம் & விரலி மஞ்சள் செட் தேவை.',
       en: 'Hello Thimma Kannan, I would like to buy Thazhampoo Kumkum & Turmeric Roots.'
     }
   },
@@ -150,7 +150,7 @@ export const materialsData = [
     availability: true,
     price: null,
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், பித்தளை விளக்கு செட் பற்றிய விபரம் கோருகிறேன்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், பித்தளை விளக்கு செட் பற்றிய விபரம் கோருகிறேன்.',
       en: 'Hello Thimma Kannan, please share details for Brass Diya set.'
     }
   }

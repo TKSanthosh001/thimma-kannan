@@ -37,7 +37,7 @@ export const servicesData = [
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், எனக்கு பூஜை & ஹோம பொருட்கள் பற்றிய விவரங்கள் தேவைப்படுகின்றன.',
+      ta: 'வணக்கம் திம்மா கண்ணன், எனக்கு பூஜை & ஹோம பொருட்கள் பற்றிய விவரங்கள் தேவைப்படுகின்றன.',
       en: 'Hello Thimma Kannan, I am interested in Pooja & Homam materials packages. Please share details.'
     }
   },
@@ -78,7 +78,7 @@ export const servicesData = [
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், எனக்கு கிரகப்பிரவேச (புதுமனை புகுவிழா) பூஜை பேக்கேஜ் விவரங்கள் வேண்டும்.',
+      ta: 'வணக்கம் திம்மா கண்ணன், எனக்கு கிரகப்பிரவேச (புதுமனை புகுவிழா) பூஜை பேக்கேஜ் விவரங்கள் வேண்டும்.',
       en: 'Hello Thimma Kannan, I would like to enquire about the Gruhapravesam (House Warming) package.'
     }
   },
@@ -119,7 +119,7 @@ export const servicesData = [
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், எனக்கு திருமணச் சடங்கு பூஜை பொருட்கள் பற்றிய தகவல்கள் தேவை.',
+      ta: 'வணக்கம் திம்மா கண்ணன், எனக்கு திருமணச் சடங்கு பூஜை பொருட்கள் பற்றிய தகவல்கள் தேவை.',
       en: 'Hello Thimma Kannan, I would like to know more about Marriage function ritual packages.'
     }
   },
@@ -160,7 +160,7 @@ export const servicesData = [
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், எனக்கு இறுதிச் சடங்கு / காரியப் பொருட்கள் பற்றிய விவரங்கள் தேவை.',
+      ta: 'வணக்கம் திம்மா கண்ணன், எனக்கு இறுதிச் சடங்கு / காரியப் பொருட்கள் பற்றிய விவரங்கள் தேவை.',
       en: 'Hello Thimma Kannan, I need information regarding Funeral & Dead-Kaariyam ritual material packages.'
     }
   },
@@ -199,7 +199,7 @@ export const servicesData = [
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திருமா கண்ணன், எனக்கு சுப நிகழ்ச்சிகளுக்கான பிரத்யேக பூஜை பொருட்கள் பேக்கேஜ் தேவை.',
+      ta: 'வணக்கம் திம்மா கண்ணன், எனக்கு சுப நிகழ்ச்சிகளுக்கான பிரத்யேக பூஜை பொருட்கள் பேக்கேஜ் தேவை.',
       en: 'Hello Thimma Kannan, I am enquiring about ritual packages for religious family ceremonies.'
     }
   }

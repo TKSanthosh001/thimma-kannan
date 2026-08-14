@@ -1,4 +1,4 @@
-# Thimma Kannan (திருமா கண்ணன்) - Traditional Ceremony Materials Website
+# Thimma Kannan (திம்மா கண்ணன்) - Traditional Ceremony Materials Website
 
 A modern, devotional, mobile-first website for **Thimma Kannan**, providing complete ritual and pooja material packages for Poojavaagal, Homams, House Warming (Gruhapravesam), Weddings, Funeral/Dead-Kaariyam, and traditional South Indian Hindu ceremonies.
 
