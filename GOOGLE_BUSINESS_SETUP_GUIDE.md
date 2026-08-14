@@ -25,9 +25,9 @@ This step-by-step guide explains how to list **Thimma Kannan (திம்மா
 ## Step 2: Add Website Link & Contact Info
 
 1. **Website URL**:
-   Set `https://tksanthosh001.github.io/thimma-kannan/` (or your custom domain like `https://thimmakannan.com`).
+   Set `https://thimmakannanshop.netlify.app/` (or your custom domain like `https://thimmakannanpooja.in`).
 2. **Appointment Link / List Upload Link**:
-   Set `https://tksanthosh001.github.io/thimma-kannan/#iyer-homam-list` (Direct link to the list resolver section).
+   Set `https://thimmakannanshop.netlify.app/#iyer-homam-list` (Direct link to the list resolver section).
 3. **Phone Number**: `+91 90434 61987` (Ensure this phone has WhatsApp active).
 
 ---

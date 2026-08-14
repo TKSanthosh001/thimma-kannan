@@ -32,6 +32,6 @@ export const businessConfig = {
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.22271810452!2d78.118!3d9.914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5828!2sChinna+Kadai+St%2C+South+Gate%2C+Madurai%2C+Tamil+Nadu+625001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
 
   // SEO & Deployment Base Configuration
-  siteUrl: 'https://tksanthosh001.github.io/thimma-kannan',
+  siteUrl: 'https://thimmakannanshop.netlify.app',
   googleAnalyticsId: '',
 };
