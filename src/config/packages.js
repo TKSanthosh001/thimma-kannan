@@ -1,87 +1,106 @@
-// Pre-configured Ceremony Packages Data
 export const packagesData = [
   {
-    id: 'pack-ganapathi-homam',
-    title: {
-      ta: 'கணபதி ஹோம பூரண பேக்கேஜ்',
-      en: 'Ganapathi Homam Complete Kit'
-    },
+    id: 'ganapathi-homam-pkg',
     category: 'pooja-homam',
-    desc: {
-      ta: 'வீடு மற்றும் அலுவலக நல்வாழ்விற்குத் தேவையான அனைத்து கணபதி ஹோம திரவியங்கள் அடங்கிய முழு தொகுப்பு.',
-      en: 'Comprehensive package containing all authentic ingredients required for Ganapathi Homam in homes & offices.'
-    },
-    itemCount: '25+ Items Included',
-    itemsList: {
-      ta: ['அரசு சமித்து', 'சுத்த பசு நெய்', 'நவதானியம்', 'வெள்ளம்', 'தேங்காய்', 'சாம்பிராணி & சூடம்', 'மஞ்சள், குங்குமம்'],
-      en: ['Peepal Samithu', 'Pure Cow Ghee', 'Navadhanyam', 'Jaggery', 'Coconuts', 'Sambrani & Camphor', 'Turmeric & Kumkum']
-    },
-    whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், கணபதி ஹோம பூரண பேக்கேஜ் ஆர்டர் / விவரங்கள் கேட்க விரும்புகிறேன்.',
-      en: 'Hello Thimma Kannan, I would like to enquire about the Ganapathi Homam Complete Kit.'
-    }
-  },
-  {
-    id: 'pack-gruhapravesam-grand',
     title: {
-      ta: 'கிரகப்பிரவேச கிராண்ட் பேக்',
-      en: 'Gruhapravesam Grand Ceremony Pack'
+      ta: 'கணபதி ஹோம தொகுப்பு',
+      en: 'Ganapathi Homam Essential Bundle'
     },
-    category: 'gruhapravesam',
     desc: {
-      ta: 'புதுமனை புகுவிழா வாஸ்து சாந்தி, லக்ஷ்மி கணபதி ஹோமம் மற்றும் பால்காய்ச்சும் சடங்கு முழுமையான தொகுப்பு.',
-      en: 'All-inclusive package for House Warming, Vastu Shanthi, Lakshmi Pooja, and Milk Boiling ceremony.'
+      ta: 'கணபதி ஹோமத்திற்குத் தேவையான அனைத்து முக்கிய பொருட்களும் அடங்கிய தயார் தொகுப்பு.',
+      en: 'Complete prepared material kit arranged for Ganapathi Homam as requested by priests.'
     },
-    itemCount: '40+ Items Included',
+    image: '/images/ganapathi_package.jpg',
+    itemCount: '25+ Items',
     itemsList: {
-      ta: ['பித்தளை கலசம் set', 'வாஸ்து ஹோம விறகு', 'நாணயங்கள்', 'மாவிலை & தோரணம்', 'பால்காய்ச்சும் செம்பு', 'மங்களப் பொருட்கள்'],
-      en: ['Brass Kalasam set', 'Vastu Homam wood', 'Pooja coins', 'Mango leaves', 'Milk boiling pot', 'Auspicious items']
+      ta: [
+        'ஹோம விறகுகள் & சமித்து',
+        'சுத்தமான பசு நெய்',
+        'நவதானியம் (9 தானியங்கள்)',
+        'தேங்காய் & வெற்றிலை பாக்கு',
+        'மஞ்சள், குங்குமம், கற்பூரம், சாம்பிராணி',
+        'அவல்பொரி & மோதக பொருட்கள்'
+      ],
+      en: [
+        'Homam Wood & Samithu Sticks',
+        'Pure Cow Ghee',
+        'Navadhanyam (9 Grains)',
+        'Coconut & Betel Leaves',
+        'Turmeric, Kumkum, Camphor, Incense',
+        'Puffed Rice & Modhak Ritual Kits'
+      ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், கிரகப்பிரவேச கிராண்ட் பேக் பற்றிய விவரங்களை அறிய விரும்புகிறேன்.',
-      en: 'Hello Thimma Kannan, please share details for the Gruhapravesam Grand Ceremony Pack.'
+      ta: 'வணக்கம் திம்மா கண்ணன், கணபதி ஹோம பேக்கேஜ் பற்றி விசாரிக்க விரும்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I would like to inquire about the Ganapathi Homam bundle...'
     }
   },
   {
-    id: 'pack-nischayathartham',
+    id: 'gruhapravesam-pkg',
+    category: 'gruhapravesam',
+    title: {
+      ta: 'கிரகப்பிரவேச முழுத் தொகுப்பு',
+      en: 'Gruhapravesam Complete Package'
+    },
+    desc: {
+      ta: 'வீடு புகுவிழா சடங்குகள், வாஸ்து சாந்தி மற்றும் கணபதி ஹோமத்திற்கான அனைத்து பொருட்கள்.',
+      en: 'All ceremonial items arranged for housewarming, milk boiling, Vastu Shanthi and fire rituals.'
+    },
+    image: '/images/gruhapravesam_package.jpg',
+    itemCount: '40+ Items',
+    itemsList: {
+      ta: [
+        'பூஜா கலசம் & மாவிலை தோரணம்',
+        'பால் காய்ச்சும் செம்பு பாத்திரம் & சாமான்கள்',
+        'கணபதி & வாஸ்து ஹோம சாமான்கள்',
+        'நவதானியம் & நவரத்தின கலசப் பொருட்கள்',
+        'தீப எண்ணெய், திரி & நறுமண திரவியங்கள்'
+      ],
+      en: [
+        'Pooja Kalasam & Mango Leaves Garland',
+        'Milk Boiling Brass Vessel & Accessories',
+        'Ganapathi & Vastu Fire Ritual Goods',
+        'Navadhanyam & Navarathinam Items',
+        'Lamp Oil, Wicks & Fragrant Spices'
+      ]
+    },
+    whatsappMessage: {
+      ta: 'வணக்கம் திம்மா கண்ணன், கிரகப்பிரவேச பேக்கேஜ் பற்றி விசாரிக்க விரும்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I would like to inquire about the Gruhapravesam complete package...'
+    }
+  },
+  {
+    id: 'nischayathartham-pkg',
+    category: 'wedding-events',
     title: {
       ta: 'நிச்சயதார்த்த மங்கள தொகுப்பு',
-      en: 'Nischayathartham Auspicious Package'
+      en: 'Nischayathartham Ritual Bundle'
     },
-    category: 'wedding-marriage',
     desc: {
-      ta: 'திருமண நிச்சயதார்த்த சடங்கிற்கு தேவையான தம்பூல தட்டுகள், சந்தனக் கிண்ணம், மஞ்சள் குங்கும சிமிழ் அடங்கிய பேக்.',
-      en: 'Essential ceremony items for engagement including Thamboolam trays, Chandan container, and ritual sets.'
+      ta: 'நிச்சயதார்த்த தாம்பூல சடங்கு மற்றும் மங்கள வழிபாட்டிற்குத் தேவையான பொருட்கள்.',
+      en: 'Prepared material bundle for engagement ritual plates, auspicious items and traditional ceremonies.'
     },
-    itemCount: '20+ Items Included',
+    image: '/images/nischayathartham_package.jpg',
+    itemCount: '30+ Items',
     itemsList: {
-      ta: ['அலங்காரத் தட்டுகள்', 'சந்தனம் & பன்னீர் செட்', 'வெற்றிலை பாக்கு', 'மஞ்சள் கிழங்கு', 'மங்களக் குங்குமம்'],
-      en: ['Decorated trays', 'Sandalwood & Rosewater set', 'Betel leaves & nuts', 'Turmeric roots', 'Sacred Kumkum']
+      ta: [
+        'தாம்பூல தட்டு அலங்கார பொருட்கள்',
+        'மஞ்சள், குங்குமம், சந்தனம்',
+        'வெற்றிலை பாக்கு & பழங்கள்',
+        'மங்கள தீப சாமான்கள்',
+        'நிச்சயதார்த்த பூஜா பொருட்கள்'
+      ],
+      en: [
+        'Tamboolam Tray Decoration Materials',
+        'Turmeric, Kumkum, Sandalwood Paste',
+        'Betel Leaves, Nuts & Fruits',
+        'Auspicious Lamp Essentials',
+        'Engagement Pooja Material Set'
+      ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், நிச்சயதார்த்த மங்கள தொகுப்பு பற்றிய விபரம் தேவை.',
-      en: 'Hello Thimma Kannan, I am interested in the Nischayathartham Auspicious Package.'
-    }
-  },
-  {
-    id: 'pack-karumathi-16day',
-    title: {
-      ta: '16-ஆம் நாள் கருமாதி காரிய பேக்',
-      en: '16th-Day Karumathi Ritual Pack'
-    },
-    category: 'funeral-rituals',
-    desc: {
-      ta: 'சாஸ்திரப்படி 16-ஆம் நாள் அபர காரியங்கள் மற்றும் தானங்களுக்குத் தேவையான அனைத்து பொருட்கள் மரியாதையுடன் பேக் செய்யப்படுகின்றன.',
-      en: 'Complete ritual kit arranged respectfully according to traditional rules for 16th-day Karumathi ceremonies.'
-    },
-    itemCount: '30+ Items Included',
-    itemsList: {
-      ta: ['தர்பை புல்', 'கருப்பு எள்', 'மண் பானைகள்', 'பிண்ட தான அரிசி', 'சாம்பிராணி & எள் எண்ணெய்'],
-      en: ['Dharba grass', 'Black sesame seeds', 'Earthen pots', 'Pinda rice offerings', 'Sambrani & Sesame oil']
-    },
-    whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், 16-ஆம் நாள் கருமாதி காரிய பேக் பற்றிய விவரங்கள் அறிய விரும்புகிறேன்.',
-      en: 'Hello Thimma Kannan, please share details for the 16th-Day Karumathi Ritual Pack.'
+      ta: 'வணக்கம் திம்மா கண்ணன், நிச்சயதார்த்த பேக்கேஜ் பற்றி விசாரிக்க விரும்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I would like to inquire about the Nischayathartham bundle...'
     }
   }
 ];

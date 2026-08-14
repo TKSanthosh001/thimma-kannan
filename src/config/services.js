@@ -1,206 +1,158 @@
-// Services Data Configuration (Reflecting List-Based Sourcing)
 export const servicesData = [
   {
     id: 'pooja-homam',
     slug: 'pooja-homam',
     title: {
-      ta: 'பூஜை & ஹோம பொருட்கள் ஏற்பாடு',
+      ta: 'பூஜை & ஹோமம் பொருட்கள்',
       en: 'Pooja & Homam Material Arrangements'
     },
     shortDesc: {
-      ta: 'கணபதி ஹோமம், நவதானிய ஹோமம் மற்றும் அனைத்து பூஜைகளுக்கும் உங்கள் ஐயர் கொடுத்த பட்டியலின்படி பொருட்களை ஏற்பாடு செய்கிறோம்.',
-      en: 'We arrange all Samithu wood, herbs, and materials for Ganapathi Homam, Navagraha, Ayush Homam according to your priest list.'
+      ta: 'கணபதி ஹோமம், நவதானிய ஹோமம், லட்சுமி பூஜை போன்ற அனைத்து ஆன்மீக வழிபாடுகளுக்குமான பொருட்கள் ஏற்பாடு.',
+      en: 'Complete material sourcing for Ganapathi Homam, Navagraha Homam, Lakshmi Pooja, and all ritual fires.'
     },
     fullDesc: {
-      ta: 'உங்கள் புரோகிதர் / ஐயர் கொடுத்த ஹோமப் பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். உயர்தர சமித்து விறகுகள், நெய், நவதானியங்கள் உட்பட அனைத்தையும் ஒரே தொகுப்பாக ஏற்பாடு செய்து தருகிறோம்.',
-      en: 'Send the homam material list provided by your priest on WhatsApp. We source high-grade Samithu wood, pure ghee, navadhanyam, and herbs as a complete arranged package.'
+      ta: 'உங்கள் குடும்ப ஐயர் கொடுத்த ஹோம பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். ஹோமக் குண்டம் விறகுகள், சமித்துகள், மூலிகைகள், நவதானியம், தூய்மையான நெய் மற்றும் நெல் பொரி வரை அனைத்தும் சரியாக ஏற்பாடு செய்து தரப்படும்.',
+      en: 'Simply send us the homam item list given by your priest. We source and pack all homam sticks, samithu, dry herbs, navadhanyam, pure ghee, and puffed rice per specifications.'
     },
-    image: '/images/hero_pooja_banner.jpg',
+    image: '/images/pooja_homam.jpg',
     badge: {
       ta: 'மிகவும் பிரபலம்',
-      en: 'Most Popular'
+      en: 'Most Requested'
     },
     includes: {
       ta: [
-        'ஐயர் பட்டியலின்படி பொருட்கள் திரட்டுதல்',
-        'உயர்தர சமித்து விறகுகள் (அரசு, ஆல், அத்தி)',
-        'தூய்மையான பசு நெய் & நவதானியங்கள்',
-        'மூலிகை ஹோமப் திரவியங்கள் & சாம்பிராணி',
-        'மங்களப் பொருட்கள் (மஞ்சள், குங்குமம், சந்தனம்)'
+        'ஹோம விறகுகள் & சமித்து வகைகள்',
+        'நவதானியங்கள் & மூலிகை திரவியங்கள்',
+        'சுத்தமான பசு நெய் & கற்பூரம்',
+        'தேங்காய், வெற்றிலை பாக்கு & தீப திரவியங்கள்'
       ],
       en: [
-        'Item sourcing strictly per priest list',
-        'High-grade Samithu wood sticks bundle',
-        'Pure Cow Ghee & Navadhanyam grains set',
-        'Herbal Homam dravyam & traditional dhoop',
-        'Sacred turmeric, kumkum, and sandalwood paste'
+        'Homam Wood & Ritual Samithu Sticks',
+        'Navadhanyam & Sacred Herbal Powders',
+        'Pure Cow Ghee & Camphor',
+        'Coconuts, Betel Leaves & Pooja Essentials'
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் பூஜை & ஹோம பொருட்கள் பட்டியல் உள்ளது. பொருட்களை ஏற்பாடு செய்து தர முடியுமா?',
-      en: 'Hello Thimma Kannan, I have the Pooja & Homam material list from my priest. Can you arrange these items for me?'
+      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் பூஜை / ஹோமத்திற்கான பொருட்கள் பட்டியல் உள்ளது. அதை அனுப்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I have a Pooja/Homam material list. Sending it over...'
     }
   },
   {
     id: 'gruhapravesam',
     slug: 'gruhapravesam',
     title: {
-      ta: 'கிரகப்பிரவேசம் (புதுமனை புகுவிழா)',
-      en: 'Gruhapravesam / House Warming'
+      ta: 'கிரகப்பிரவேச பொருட்கள் ஏற்பாடு',
+      en: 'Gruhapravesam Material Arrangements'
     },
     shortDesc: {
-      ta: 'உங்கள் கிரகப்பிரவேச பூஜைக்கான பொருட்கள் பட்டியல் தயாரா? Iyer கொடுத்த பட்டியலை WhatsApp-ல் அனுப்புங்கள்.',
-      en: 'Have the Gruhapravesam material list ready from your Iyer? Send it to us on WhatsApp and leave the arrangements to us.'
+      ta: 'புதிய வீடு புகுவிழா சடங்குகள் மற்றும் கணபதி ஹோமத்திற்குத் தேவையான முழுமையான மங்கள பொருட்கள்.',
+      en: 'Complete ceremonial material packages for House Warming ceremonies and Ganapathi Homam.'
     },
     fullDesc: {
-      ta: 'புதுமனை புகுவிழாவிற்கு லக்ஷ்மி குபேர பூஜை, வாஸ்து சாந்தி மற்றும் ஹோமத்திற்கு சாஸ்திரிகள் கொடுத்த பட்டியலை அனுப்புங்கள். தேவையான பொருட்கள் அனைத்தையும் ஏற்பாடு செய்து தருகிறோம்.',
-      en: 'Send us the list given by your priest for House Warming, Vastu Shanthi, and Lakshmi Pooja. We arrange and pack all required materials together.'
+      ta: 'வீடு புகுவிழா தயாரிப்பில் பல கடைகளுக்கு அலைய வேண்டாம். உங்கள் ஐயர் கொடுத்த பட்டியலை எங்களுக்கு WhatsApp மூலம் அனுப்புங்கள். பால் காய்ச்சும் சடங்கு, கலச ஸ்தாபனம் மற்றும் வாஸ்து சாந்தி வரை தேவையான அனைத்தும் தொகுத்து வழங்கப்படும்.',
+      en: 'Avoid running around for your housewarming setup. Send your priest list to us via WhatsApp. We arrange everything for milk boiling ritual, Kalasam setup, and Vastu Shanthi.'
     },
     image: '/images/gruhapravesam_pooja.jpg',
     badge: {
-      ta: 'சிறப்பு சேவை',
-      en: 'Specialized Service'
+      ta: 'சிறப்பு பேக்கேஜ்',
+      en: 'Special Package'
     },
     includes: {
       ta: [
-        'கிரகப்பிரவேச ஐயர் பட்டியல் படி ஏற்பாடு',
-        'பித்தளை/செம்பு கலச சொம்பு & தேங்காய்',
-        'வாஸ்து ஹோம திரவியங்கள் & சமித்து',
-        'லக்ஷ்மி பூஜா நவதானியங்கள் & நாணயங்கள்',
-        'பால்காய்ச்சும் பாத்திரம் & மங்களப் பொருட்கள்'
+        'பூஜா கலசம் & மா இலை தோரணம்',
+        'கணபதி ஹோம பொருட்கள் தொகுப்பு',
+        'பால் காய்ச்சும் சடங்கு பொருட்கள்',
+        'வாஸ்து சாந்தி & புண்ணியாவாசனம் பொருட்கள்'
       ],
       en: [
-        'Material arrangement per Gruhapravesam list',
-        'Brass/Copper Kalasam pot & coconut set',
-        'Vastu Homam herbs & sacred firewood',
-        'Lakshmi Pooja coins & Navadhanyam set',
-        'Milk boiling vessel & auspicious items'
+        'Pooja Kalasam & Mango Leaves',
+        'Full Ganapathi Homam Materials',
+        'Milk Boiling Ritual Accessories',
+        'Vastu Shanthi & Punyahavachanam Kits'
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் கிரகப்பிரவேச பூஜை பொருட்கள் பட்டியல் உள்ளது. தேவையான பொருட்களை ஏற்பாடு செய்து தர முடியுமா?',
-      en: 'Hello Thimma Kannan, I have the Gruhapravesam material list for my house warming. Can you arrange the required items?'
+      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் கிரகப்பிரவேச சடங்கு பொருட்கள் பட்டியல் உள்ளது. அதை அனுப்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I have a Gruhapravesam material list. Sending it over...'
     }
   },
   {
-    id: 'wedding-marriage',
-    slug: 'wedding-marriage',
+    id: 'wedding-events',
+    slug: 'wedding-events',
     title: {
-      ta: 'திருமண சடங்கு பொருட்கள் ஏற்பாடு',
-      en: 'Wedding Ritual Material Arrangements'
+      ta: 'திருமணம் & நிச்சயதார்த்த பொருட்கள்',
+      en: 'Wedding & Nischayathartham Materials'
     },
     shortDesc: {
-      ta: 'நிச்சயதார்த்தம், சீமந்தம், மாங்கல்ய பூஜைக்கு ஐயர் கொடுத்த பட்டியலை அனுப்புங்கள். தேவையான மங்களப் பொருட்களை ஏற்பாடு செய்கிறோம்.',
-      en: 'Send the list given by your priest for Engagement, Seemantham, and Marriage rituals. We arrange all auspicious items for you.'
+      ta: 'நிச்சயதார்த்தம், மாங்கல்ய தாரணம் மற்றும் திருமண சடங்குகளுக்கான அனைத்து பாரம்பரிய மங்கள பொருட்கள்.',
+      en: 'Complete South Indian marriage ceremony and engagement function traditional ritual materials.'
     },
     fullDesc: {
-      ta: 'தென்னிந்திய பாரம்பரிய திருமணச் சடங்குகளுக்கு உங்கள் குடும்ப வழக்கப்படி ஐயர் தரும் பட்டியலைப் பார்த்து, தேவையான மங்களப் பொருட்கள் அனைத்தையும் ஒரே இடத்தில் திரட்டி தருகிறோம்.',
-      en: 'We source all traditional South Indian wedding ceremony items strictly based on the list provided by your family priest.'
+      ta: 'திருமண சடங்குகளுக்கான நீண்ட பட்டியலை எங்களிடம் பகிருங்கள். மாங்கல்ய பூஜை, தாம்பூல தட்டுகள், சப்தபதி, ஹோம சாமான்கள் மற்றும் நல்வரவு பொருட்கள் அனைத்தையும் ஒரே இடத்தில் தயார் செய்து தருகிறோம்.',
+      en: 'Share your priest wedding checklist with us. We arrange Mangalya pooja items, Tamboolam plates, Saptapadi materials, homam sets, and welcome ritual items under one roof.'
     },
-    image: '/images/hero_pooja_banner.jpg',
+    image: '/images/marriage.jpg',
     badge: {
-      ta: 'பாரம்பரிய சடங்குகள்',
-      en: 'Traditional Rituals'
+      ta: 'பாரம்பரிய சடங்கு',
+      en: 'Traditional Ceremonies'
     },
     includes: {
       ta: [
-        'திருமண ஐயர் பட்டியல் படி பொருட்கள் சேகரிப்பு',
-        'சீர்வரிசை தட்டுகள் & மங்களப் பொருட்கள்',
-        'மாங்கல்ய பூஜை பொருட்கள் & மஞ்சள் சரடு',
-        'நிச்சயதார்த்த பூஜா பொருட்கள் ஏற்பாடு',
-        'சப்தபதி & ஹோம சமித்து திரவியங்கள்'
+        'தாம்பூல தட்டுகள் & வரிசை பொருட்கள்',
+        'மாங்கல்ய பூஜா பொருட்கள்',
+        'திருமண ஹோம சாமான்கள்',
+        'சப்தபதி & பாரம்பரிய சடங்கு பொருட்கள்'
       ],
       en: [
-        'Sourcing per wedding priest list',
-        'Traditional Seer Varisai trays & items',
-        'Mangalyam pooja items & sacred yellow thread',
-        'Nischayathartham ritual items bundle',
-        'Saptapadi & Vivaha Homam materials'
+        'Tamboolam Trays & Ceremonial Goods',
+        'Mangalya Pooja Accessories',
+        'Wedding Fire Ritual Bundles',
+        'Saptapadi & Traditional Ritual Sets'
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் திருமணச் சடங்கு பொருட்கள் பட்டியல் உள்ளது. பொருட்களை ஏற்பாடு செய்து தருவீர்களா?',
-      en: 'Hello Thimma Kannan, I have the wedding ceremony material list. Can you arrange the items for me?'
+      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் திருமண சடங்கு பொருட்கள் பட்டியல் உள்ளது. அதை அனுப்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I have a Wedding ceremony material list. Sending it over...'
     }
   },
   {
     id: 'funeral-rituals',
     slug: 'funeral-rituals',
     title: {
-      ta: 'இறுதிச் சடங்கு & காரியப் பொருட்கள் ஏற்பாடு',
-      en: 'Funeral & Dead-Kaariyam Arrangements'
+      ta: 'இறுதி சடங்கு & கருமாதி பொருட்கள்',
+      en: 'Funeral & Dead-Kaariyam Ritual Materials'
     },
     shortDesc: {
-      ta: 'சாஸ்திரிகள் கொடுத்த இறுதிச் சடங்கு & 16-ஆம் நாள் காரியப் பொருட்கள் பட்டியலை அனுப்புங்கள். மரியாதையுடன் ஏற்பாடு செய்து தருகிறோம்.',
-      en: 'Send the list for traditional funeral rites, 16th-day Karumathi, and Thithi. We arrange all materials respectfully.'
+      ta: 'இறுதி சடங்கு, 16-ஆம் நாள் கருமாதி மற்றும் ஆண்டு திதி சடங்குகளுக்கான மரியாதை மற்றும் பாரம்பரிய சாமான்கள் ஏற்பாடு.',
+      en: 'Respectful, traditional material arrangements for funeral rites, 16th-day Karumathi, and annual Thithi.'
     },
     fullDesc: {
-      ta: 'துயரமான தருணங்களில் பல கடைகளுக்கு அலைந்து திரியாமல், சாஸ்திரிகள் சொல்லும் இறுதிச் சடங்கு மற்றும் கருமாதி காரியப் பொருட்கள் அனைத்தையும் பட்டியல்படி திரட்டி தருகிறோம்.',
-      en: 'During difficult times, avoid running around. Send us the priest list and we respectfully arrange all required items for rites and Karumathi.'
+      ta: 'துயரமான தருணத்தில் சிரமமின்றி சடங்கு சாமான்களைப் பெற உதவிகரமாக இருக்கிறோம். 1-ஆம் நாள் முதல் 16-ஆம் நாள் கருமாதி வரை சாஸ்திரிகள் கொடுக்கும் பட்டியலின்படி தேவையான அனைத்து பாரம்பரிய பொருட்களும் விரைவாக ஏற்பாடு செய்யப்படும்.',
+      en: 'Providing calm, hassle-free ritual material support during sorrowful times. All items requested by your priest for cremation, 16th-day Karumathi, or Thithi are arranged with utmost care.'
     },
-    image: '/images/gruhapravesam_pooja.jpg',
+    image: '/images/funeral_rituals.jpg',
     badge: {
-      ta: 'கனிவான சேவை',
-      en: 'Dignified Service'
+      ta: 'மரியாதைக்குரிய சேவை',
+      en: 'Respectful Service'
     },
     includes: {
       ta: [
-        'சாஸ்திரிகள் பட்டியல் படி துல்லியமான ஏற்பாடு',
-        'இறுதிச் சடங்கு பூஜா திரவியங்கள்',
-        'எள், தர்பை புல் & பிண்ட தான பொருட்கள்',
-        '16-ஆம் நாள் கருமாதி காரியப் பொருட்கள்',
-        'ஆண்டு திதி & அபர காரிய தேவைகள்'
+        'கருமாதி சடங்கு பொருட்கள் தொகுப்பு',
+        '16-ஆம் நாள் காரிய தான சாமான்கள்',
+        'எள், தர்பை, பிண்ட பொருட்கள்',
+        'ஆண்டு திதி பூஜா சாமான்கள்'
       ],
       en: [
-        'Arranged strictly per priest instructions',
-        'Funeral ceremony ritual items',
-        'Sesame seeds (Til), Dharba grass, & Pinda offerings',
-        '16th Day Karumathi ceremony items',
-        'Annual Thithi & Apara Kriya requirements'
+        'Karumathi Ceremonial Kits',
+        '16th Day Ritual Materials & Dhanam Items',
+        'Gingelly, Dharba Grass & Pinda Essentials',
+        'Annual Thithi Pooja Material Bundles'
       ]
     },
     whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் காரியப் பொருட்கள் பட்டியல் உள்ளது. தேவையான பொருட்களை ஏற்பாடு செய்து தர முடியுமா?',
-      en: 'Hello Thimma Kannan, I have the material list for Karumathi / funeral rites. Can you arrange the required items?'
-    }
-  },
-  {
-    id: 'religious-functions',
-    slug: 'religious-functions',
-    title: {
-      ta: 'மற்ற சுப நிகழ்ச்சி தேவைகள் ஏற்பாடு',
-      en: 'Other Religious Function Arrangements'
-    },
-    shortDesc: {
-      ta: 'சஷ்டியப்தபூர்த்தி, காதுகுத்து, வளைகாப்பு மற்றும் நவராத்திரி பூஜைகளுக்கான ஐயர் பட்டியலின்படி பொருட்கள் ஏற்பாடு.',
-      en: 'Material arrangements for Sashtiapthapoorthi (60th Birthday), Seemantham, and Navarathri poojas per priest list.'
-    },
-    fullDesc: {
-      ta: 'எந்தவொரு குடும்ப சடங்காக இருந்தாலும், உங்கள் ஐயர் கொடுத்த பட்டியலை அனுப்பி தேவையான பொருட்களை சுலபமாக ஏற்பாடு செய்து கொள்ளலாம்.',
-      en: 'For any traditional family ceremony, send us your priest list and we will arrange all the necessary materials.'
-    },
-    image: '/images/hero_pooja_banner.jpg',
-    badge: {
-      ta: 'பட்டியல் சேவை',
-      en: 'List Arrangement'
-    },
-    includes: {
-      ta: [
-        'பிரத்யேக ஐயர் லிஸ்ட் ஆர்டர்கள் ஏற்பாடு',
-        'சஷ்டியப்தபூர்த்தி / 80-ஆம் கல்யாண பொருட்கள்',
-        'வளைகாப்பு & சீமந்த சடங்கு பொருட்கள்',
-        'நவராத்திரி / விநாயகர் சதுர்த்தி பூஜா தேவைகள்'
-      ],
-      en: [
-        'Arrangement per custom priest list',
-        'Sashtiapthapoorthi (60th) ceremony items',
-        'Seemantham & Bangles ceremony bundles',
-        'Ganesh Chaturthi / Navarathri pooja requirements'
-      ]
-    },
-    whatsappMessage: {
-      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் சுப நிகழ்ச்சிக்கான பொருட்கள் பட்டியல் உள்ளது. தேவையான பொருட்களை ஏற்பாடு செய்து தர முடியுமா?',
-      en: 'Hello Thimma Kannan, I have a material list for a family function. Can you arrange the required items for me?'
+      ta: 'வணக்கம் திம்மா கண்ணன், என்னிடம் இறுதி சடங்கு / கருமாதி பொருட்கள் பட்டியல் உள்ளது. விவரங்கள் அனுப்புகிறேன்...',
+      en: 'Hello Thimma Kannan, I have a funeral / Karumathi ritual material list. Sending details...'
     }
   }
 ];
