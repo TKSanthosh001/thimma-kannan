@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
 import { businessConfig } from '../config/business';
@@ -11,7 +10,7 @@ export const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,26 +20,67 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // IntersectionObserver to set active section link on scroll
   useEffect(() => {
+    const sectionIds = ['home', 'about', 'services', 'how-it-works', 'packages', 'materials', 'why-choose', 'faq', 'contact'];
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
     setMobileMenuOpen(false);
-  }, [location]);
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; // Sticky header height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const navLinks = [
-    { path: '/', label: t.nav.home },
-    { path: '/about', label: t.nav.about },
-    { path: '/services', label: t.nav.services },
-    { path: '/packages', label: t.nav.packages },
-    { path: '/materials', label: t.nav.materials },
-    { path: '/contact', label: t.nav.contact }
+    { id: 'home', label: t.nav.home },
+    { id: 'about', label: t.nav.about },
+    { id: 'services', label: t.nav.services },
+    { id: 'how-it-works', label: t.nav.workflow },
+    { id: 'packages', label: t.nav.packages },
+    { id: 'materials', label: t.nav.materials },
+    { id: 'contact', label: t.nav.contact }
   ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'glass-header shadow-md' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'glass-header shadow-md' : 'bg-main/90'}`}>
       <div className="devotional-top-bar" />
-      <div className="container mx-auto flex items-center justify-between py-3">
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Brand Logo & Name */}
-        <Link to="/" className="flex items-center gap-2.5 text-decoration-none">
+        <a
+          href="#home"
+          onClick={(e) => scrollToSection(e, 'home')}
+          className="flex items-center gap-2.5 text-decoration-none"
+        >
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-600 to-red-800 flex items-center justify-center text-amber-100 shadow-md">
             <Flame className="w-6 h-6 animate-pulse" />
           </div>
@@ -48,47 +88,50 @@ export const Header = () => {
             <h1 className="text-xl md:text-2xl font-bold font-heading tracking-wide leading-tight text-maroon dark:text-gold">
               {businessConfig.businessName[lang]}
             </h1>
-            <p className="text-xs text-secondary dark:text-muted hidden sm:block">
+            <p className="text-[11px] text-secondary dark:text-muted hidden sm:block">
               {lang === 'ta' ? 'பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Arrangements'}
             </p>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-5">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive = activeSection === link.id;
             return (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-saffron ${
-                  isActive ? 'text-maroon dark:text-gold font-bold border-b-2 border-saffron pb-1' : 'text-primary'
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => scrollToSection(e, link.id)}
+                className={`text-xs font-semibold tracking-wide transition-all hover:text-saffron py-1 ${
+                  isActive
+                    ? 'text-maroon dark:text-gold font-bold border-b-2 border-saffron'
+                    : 'text-primary'
                 }`}
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
 
         {/* Right Actions: Language Switcher, Theme Switcher, Quick WhatsApp */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           {/* Language Toggle */}
           <button
             onClick={toggleLanguage}
-            className="px-3 py-1.5 rounded-full border border-color text-xs font-semibold hover:border-saffron transition-all flex items-center gap-1"
+            className="px-3 py-1 rounded-full border border-color text-xs font-bold hover:border-saffron transition-all flex items-center gap-1 bg-card"
             title="Switch Language / மொழியை மாற்றுக"
           >
-            <span className={lang === 'ta' ? 'text-saffron font-bold' : 'text-muted'}>தமிழ்</span>
+            <span className={lang === 'ta' ? 'text-saffron font-extrabold' : 'text-muted'}>தமிழ்</span>
             <span className="text-muted">|</span>
-            <span className={lang === 'en' ? 'text-saffron font-bold' : 'text-muted'}>EN</span>
+            <span className={lang === 'en' ? 'text-saffron font-extrabold' : 'text-muted'}>EN</span>
           </button>
 
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full border border-color hover:bg-secondary text-primary transition-all"
+            className="p-2 rounded-full border border-color hover:bg-secondary text-primary transition-all bg-card"
             title="Toggle Light / Dark Mode"
             aria-label="Toggle Theme"
           >
@@ -108,17 +151,17 @@ export const Header = () => {
         </div>
 
         {/* Mobile Header Buttons (Lang, Theme, Hamburger) */}
-        <div className="flex lg:hidden items-center gap-2">
+        <div className="flex xl:hidden items-center gap-2">
           <button
             onClick={toggleLanguage}
-            className="px-2.5 py-1 rounded-full border border-color text-xs font-bold text-saffron"
+            className="px-2.5 py-1 rounded-full border border-color text-xs font-extrabold text-saffron bg-card"
           >
             {lang === 'ta' ? 'EN' : 'தமிழ்'}
           </button>
 
           <button
             onClick={toggleTheme}
-            className="p-1.5 rounded-full border border-color text-primary"
+            className="p-1.5 rounded-full border border-color text-primary bg-card"
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
@@ -136,20 +179,21 @@ export const Header = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-header border-b border-color py-4 px-6 shadow-xl animate-fadeIn">
-          <nav className="flex flex-col gap-3">
+        <div className="xl:hidden glass-header border-b border-color py-4 px-6 shadow-xl animate-fadeIn">
+          <nav className="flex flex-col gap-2">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = activeSection === link.id;
               return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-base py-2 font-medium border-b border-color ${
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className={`text-sm py-2 font-medium border-b border-color ${
                     isActive ? 'text-maroon dark:text-gold font-bold' : 'text-primary'
                   }`}
                 >
                   {link.label}
-                </Link>
+                </a>
               );
             })}
 

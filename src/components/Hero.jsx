@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
 import { getWhatsAppUrl, getGeneralWhatsAppMessage } from '../utils/whatsapp';
@@ -8,8 +7,25 @@ import { MessageSquare, Phone, ChevronRight, FileCheck } from 'lucide-react';
 export const Hero = () => {
   const { lang, t } = useLanguage();
 
+  const scrollToServices = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('services');
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section className="relative overflow-hidden py-12 md:py-20 lg:py-24 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent">
+    <section id="home" className="relative overflow-hidden py-12 md:py-20 lg:py-24 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
@@ -17,13 +33,13 @@ export const Hero = () => {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-saffron text-xs md:text-sm font-semibold">
               <FileCheck className="w-4 h-4" />
-              <span>{lang === 'ta' ? 'பட்டியல் உங்களிடம். பொருட்கள் ஏற்பாடு எங்களிடம்.' : 'Have the list? Leave the arrangements to us.'}</span>
+              <span>{lang === 'ta' ? 'பட்டியல் உங்களிடம். பொருட்கள் ஏற்பாடு எங்களிடம்.' : 'You have the list. We take care of the arrangements.'}</span>
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight text-primary leading-tight">
               <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
               <span className="text-2xl md:text-3xl lg:text-4xl text-saffron font-medium block">
-                {lang === 'ta' ? 'உங்கள் பூஜை பொருட்கள் பட்டியல் எங்களிடம் அனுப்புங்கள்.' : 'Send us your priest list. We arrange everything.'}
+                {t.tagline}
               </span>
             </h1>
 
@@ -43,13 +59,14 @@ export const Hero = () => {
                 <span>{t.buttons.sendListWhatsApp}</span>
               </a>
 
-              <Link
-                to="/services"
+              <a
+                href="#services"
+                onClick={scrollToServices}
                 className="btn btn-primary text-sm py-3.5 px-5"
               >
                 <span>{t.buttons.exploreServices}</span>
                 <ChevronRight className="w-4 h-4" />
-              </Link>
+              </a>
 
               <a
                 href={`tel:${businessConfig.phone}`}
@@ -60,11 +77,11 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Value Highlights */}
+            {/* Core Customer Benefits */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-color">
               <div>
                 <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">1 List</h3>
-                <p className="text-xs text-muted">{lang === 'ta' ? 'ஒரே பட்டியல் போதுமானது' : 'Just send your priest list'}</p>
+                <p className="text-xs text-muted">{lang === 'ta' ? 'உங்கள் ஐயர் பட்டியல் மட்டுமே' : 'Send your priest list'}</p>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">0 Hassle</h3>
@@ -72,7 +89,7 @@ export const Hero = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-maroon dark:text-gold font-heading">WhatsApp</h3>
-                <p className="text-xs text-muted">{lang === 'ta' ? 'உடனடி பட்டியல் மதிப்பீடு' : 'Instant list evaluation'}</p>
+                <p className="text-xs text-muted">{lang === 'ta' ? 'உடனடி பொருட்கள் ஏற்பாடு' : 'Instant list arrangement'}</p>
               </div>
             </div>
           </div>

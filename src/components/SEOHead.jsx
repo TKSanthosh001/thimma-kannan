@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
-import { getLocalBusinessSchema, getWebSiteSchema, getServiceSchema } from '../seo/schemaGenerator';
+import { getLocalBusinessSchema, getWebSiteSchema } from '../seo/schemaGenerator';
 
-export const SEOHead = ({ title, description, path = '', image, serviceData }) => {
+export const SEOHead = () => {
   const { lang } = useLanguage();
 
-  const siteTitle = title 
-    ? `${title} | ${businessConfig.businessName[lang]}`
-    : `${businessConfig.businessName[lang]} - ${businessConfig.tagline[lang]}`;
+  const siteTitle = lang === 'ta'
+    ? `${businessConfig.businessName.ta} | ${businessConfig.tagline.ta}`
+    : `${businessConfig.businessName.en} | ${businessConfig.tagline.en}`;
 
-  const metaDescription = description || businessConfig.subTagline[lang];
-  const pageUrl = `${businessConfig.siteUrl}${path}`;
-  const ogImage = image || `${businessConfig.siteUrl}/images/hero_pooja_banner.jpg`;
+  const metaDescription = businessConfig.subTagline[lang];
+  const pageUrl = `${businessConfig.siteUrl}/`;
+  const ogImage = `${businessConfig.siteUrl}/images/hero_pooja_banner.jpg`;
 
   useEffect(() => {
     // 1. Update Document Title
@@ -65,12 +65,9 @@ export const SEOHead = ({ title, description, path = '', image, serviceData }) =
     }
 
     const schemas = [getLocalBusinessSchema(), getWebSiteSchema()];
-    if (serviceData) {
-      schemas.push(getServiceSchema(serviceData.name, serviceData.desc));
-    }
     scriptTag.textContent = JSON.stringify(schemas);
 
-  }, [siteTitle, metaDescription, pageUrl, ogImage, lang, serviceData]);
+  }, [siteTitle, metaDescription, pageUrl, ogImage, lang]);
 
   return null;
 };
