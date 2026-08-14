@@ -90,9 +90,15 @@ export const Header = () => {
             <span className="text-xl md:text-2xl font-extrabold font-heading text-maroon dark:text-gold tracking-tight block leading-none">
               {businessConfig.businessName[lang]}
             </span>
-            <span className="text-[10px] uppercase tracking-wider text-muted font-medium block mt-1">
-              {lang === 'ta' ? 'பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Arrangements'}
-            </span>
+            <div className="flex items-center gap-1.5 mt-1">
+              <span className="text-[10px] uppercase tracking-wider text-muted font-medium block">
+                {lang === 'ta' ? 'மதுரை தெற்கு வாசல்' : 'South Gate, Madurai'}
+              </span>
+              <span className="text-muted text-[10px]">•</span>
+              <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400 flex items-center gap-0.5">
+                ★ 4.9 (1,200+)
+              </span>
+            </div>
           </div>
         </a>
 
