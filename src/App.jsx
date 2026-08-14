@@ -7,6 +7,7 @@ import { Header } from './components/Header';
 import { TamilFestivalBanner } from './components/TamilFestivalBanner';
 import { Hero } from './components/Hero';
 import { CustomerStory } from './components/CustomerStory';
+import { IyerHomamListResolver } from './components/IyerHomamListResolver';
 import { ServicesSection } from './components/ServicesSection';
 import { ServiceModal } from './components/ServiceModal';
 import { HowItWorks } from './components/HowItWorks';
@@ -43,6 +44,9 @@ export const App = () => {
 
             {/* 2. CUSTOMER STORY (PROBLEM -> SOLUTION FLOW) */}
             <CustomerStory />
+
+            {/* 2.5 IYER & HOMAM SAMAGRI LIST RESOLVER */}
+            <IyerHomamListResolver />
 
             {/* 3. CEREMONY SERVICES */}
             <ServicesSection onSelectService={(service) => setSelectedService(service)} />

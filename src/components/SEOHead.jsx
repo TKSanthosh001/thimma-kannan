@@ -1,16 +1,21 @@
 import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { businessConfig } from '../config/business';
-import { getLocalBusinessSchema, getWebSiteSchema } from '../seo/schemaGenerator';
+import { getLocalBusinessSchema, getWebSiteSchema, getFaqSchema } from '../seo/schemaGenerator';
 
 export const SEOHead = () => {
   const { lang } = useLanguage();
 
   const siteTitle = lang === 'ta'
-    ? `${businessConfig.businessName.ta} | ${businessConfig.tagline.ta}`
-    : `${businessConfig.businessName.en} | ${businessConfig.tagline.en}`;
+    ? `${businessConfig.businessName.ta} | ஐயர் ஹோம பொருட்கள் பட்டியல் | Iyer List & Homam Samagri`
+    : `${businessConfig.businessName.en} | Iyer List & Homam Samagri Items Store`;
 
-  const metaDescription = businessConfig.subTagline[lang];
+  const metaDescription = lang === 'ta'
+    ? 'உங்களின் ஐயர் / வாத்தியார் கொடுத்த ஹோம மற்றும் பூஜை பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். கணபதி ஹோமம், கிரகப்பிரவேசம், அபர காரியம் அனைத்தும் ஒரே இடத்தில்.'
+    : 'Send your Iyer list or Vadhyar homam list on WhatsApp. Complete authentic materials arranged and packed for Ganapathi Homam, Gruhapravesam, Weddings & rituals.';
+
+  const keywordsContent = 'iyer list, homam list, vadhyar list, ganapathi homam list, grahapravesam homam list, navagraha homam items, pooja samagri list, ஐயர் பட்டியல், ஹோம பொருட்கள் பட்டியல், கணபதி ஹோமம் சாமான்கள், சென்னை வாத்தியார் பட்டியல், மதுரை பூஜை பொருட்கள்';
+
   const pageUrl = `${businessConfig.siteUrl}/`;
   const ogImage = `${businessConfig.siteUrl}/images/hero_pooja_banner.jpg`;
 
@@ -29,8 +34,9 @@ export const SEOHead = () => {
       element.setAttribute('content', content);
     };
 
-    // 2. Meta Description
+    // 2. Meta Description & Keywords
     setMetaTag('meta[name="description"]', 'name', 'description', metaDescription);
+    setMetaTag('meta[name="keywords"]', 'name', 'keywords', keywordsContent);
 
     // 3. Open Graph Metadata
     setMetaTag('meta[property="og:title"]', 'property', 'og:title', siteTitle);
@@ -64,7 +70,7 @@ export const SEOHead = () => {
       document.head.appendChild(scriptTag);
     }
 
-    const schemas = [getLocalBusinessSchema(), getWebSiteSchema()];
+    const schemas = [getLocalBusinessSchema(), getWebSiteSchema(), getFaqSchema()];
     scriptTag.textContent = JSON.stringify(schemas);
 
   }, [siteTitle, metaDescription, pageUrl, ogImage, lang]);
