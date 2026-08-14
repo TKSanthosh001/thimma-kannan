@@ -7,12 +7,12 @@ export const SEOHead = () => {
   const { lang } = useLanguage();
 
   const siteTitle = lang === 'ta'
-    ? `${businessConfig.businessName.ta} | ஐயர் ஹோம பொருட்கள் பட்டியல் | Iyer List & Homam Samagri`
-    : `${businessConfig.businessName.en} | Iyer List & Homam Samagri Items Store`;
+    ? 'திம்மா கண்ணன் மதுரை | பூஜை, ஹோமம் & சடங்கு பொருட்கள்'
+    : 'Thimma Kannan Madurai | Pooja, Homam & Ritual Materials';
 
   const metaDescription = lang === 'ta'
-    ? 'உங்களின் ஐயர் / வாத்தியார் கொடுத்த ஹோம மற்றும் பூஜை பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். கணபதி ஹோமம், கிரகப்பிரவேசம், அபர காரியம் அனைத்தும் ஒரே இடத்தில்.'
-    : 'Send your Iyer list or Vadhyar homam list on WhatsApp. Complete authentic materials arranged and packed for Ganapathi Homam, Gruhapravesam, Weddings & rituals.';
+    ? 'மதுரையில் உங்களின் ஐயர் / வாத்தியார் கொடுத்த ஹோமம், பூஜை, கிரகப்பிரவேசம் & சுபகாரிய பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். தேவையான பொருட்கள் அனைத்தும் ஒரே இடத்தில்.'
+    : 'Send your Iyer list or Vadhyar homam list on WhatsApp in Madurai. Complete authentic materials arranged and packed for Ganapathi Homam, Gruhapravesam, Weddings & rituals.';
 
   const keywordsContent = 'iyer list, homam list, vadhyar list, ganapathi homam list, grahapravesam homam list, navagraha homam items, pooja samagri list, ஐயர் பட்டியல், ஹோம பொருட்கள் பட்டியல், கணபதி ஹோமம் சாமான்கள், சென்னை வாத்தியார் பட்டியல், மதுரை பூஜை பொருட்கள்';
 

@@ -11,6 +11,7 @@ import { CustomerStory } from './components/CustomerStory';
 import { IyerHomamListResolver } from './components/IyerHomamListResolver';
 import { AuthenticityGuaranteeSection } from './components/AuthenticityGuaranteeSection';
 import { ServicesSection } from './components/ServicesSection';
+import { MaterialPhotoCarousel } from './components/MaterialPhotoCarousel';
 import { ServiceModal } from './components/ServiceModal';
 import { HowItWorks } from './components/HowItWorks';
 import { MaterialsSection } from './components/MaterialsSection';
@@ -55,6 +56,9 @@ export const App = () => {
 
             {/* 3. CEREMONY SERVICES */}
             <ServicesSection onSelectService={(service) => setSelectedService(service)} />
+
+            {/* 3.5 MATERIAL & ARRANGEMENT PHOTO SHOWCASE CAROUSEL */}
+            <MaterialPhotoCarousel />
 
             {/* 4. HOW IT WORKS */}
             <HowItWorks />

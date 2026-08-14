@@ -65,7 +65,6 @@ export const Header = () => {
     { id: 'about', label: t.nav.about },
     { id: 'services', label: t.nav.services },
     { id: 'how-it-works', label: t.nav.workflow },
-    { id: 'packages', label: t.nav.packages },
     { id: 'materials', label: t.nav.materials },
     { id: 'contact', label: t.nav.contact }
   ];

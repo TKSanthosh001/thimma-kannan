@@ -39,20 +39,21 @@ export const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-primary leading-[1.18] tracking-tight">
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-primary leading-[1.2] tracking-tight">
               <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
-              <span className="text-primary font-bold block">
-                {t.tagline}
+              <span className="text-slate-900 dark:text-slate-100 font-bold block">
+                {lang === 'ta'
+                  ? 'உங்கள் பட்டியலை அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
+                  : 'Send your list. We arrange all required materials.'}
               </span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-2xl text-secondary font-semibold leading-relaxed">
-              {t.subTagline}
-            </p>
-
-            <p className="text-base md:text-lg text-muted leading-relaxed max-w-2xl">
-              {t.heroSubtext}
+            <p className="text-base md:text-xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+              {lang === 'ta'
+                ? 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். பட்டியலில் உள்ள தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து, முறையாக தொகுத்து வழங்குகிறோம்.'
+                : 'Send the pooja material list given by your Iyer / Priest on WhatsApp. We source all required items, pack everything neatly, and have it ready for delivery or pickup.'}
             </p>
 
             {/* Primary Dominant CTA & Secondary Link */}
@@ -62,34 +63,33 @@ export const Hero = () => {
                   href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-whatsapp text-base md:text-lg py-4 px-8 shadow-xl hover:scale-105 transition-transform font-extrabold"
+                  className="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all inline-flex items-center gap-3"
                 >
-                  <MessageSquare className="w-6 h-6" />
-                  <span>{t.buttons.sendListWhatsApp}</span>
+                  <MessageSquare className="w-5 h-5" />
+                  <span>{lang === 'ta' ? 'WhatsApp-ல் பட்டியலை அனுப்புங்கள்' : 'Send List on WhatsApp'}</span>
                 </a>
 
                 <a
                   href="#services"
                   onClick={scrollToServices}
-                  className="text-xs md:text-sm font-bold text-saffron hover:underline inline-flex items-center gap-1.5 py-3 px-2"
+                  className="text-xs md:text-sm font-bold text-amber-700 dark:text-amber-400 hover:underline inline-flex items-center gap-1.5 py-3 px-2"
                 >
-                  <span>{t.buttons.exploreServices}</span>
-                  <ArrowDown className="w-4 h-4" />
+                  <span>{lang === 'ta' ? 'சேவைகளைப் பார்க்க ↓' : 'View Services ↓'}</span>
                 </a>
               </div>
 
               {/* 3 Concise Benefit Checks */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-color max-w-xl">
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200 dark:border-slate-800 max-w-xl">
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'Iyer பட்டியல் அனுப்புங்கள்' : 'Send Priest List'}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Source All Items'}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
+                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   <span>{lang === 'ta' ? 'Delivery / Collection' : 'Delivery & Pickup'}</span>
                 </div>
               </div>
@@ -99,23 +99,13 @@ export const Hero = () => {
 
           {/* Right Single Strong Devotional Visual Image */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-saffron/30 group">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-amber-200/80 dark:border-amber-500/20 bg-white p-2">
               <img
                 src={getImageUrl('/images/hero_pooja_banner.jpg')}
                 alt="Thimma Kannan Traditional Pooja Setup"
                 fetchpriority="high"
-                className="w-full h-[360px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[340px] sm:h-[440px] object-cover rounded-xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
-                <div className="text-white space-y-1">
-                  <p className="text-xs font-bold uppercase tracking-wider text-amber-300">
-                    {lang === 'ta' ? 'பாரம்பரிய சேவை' : 'Authentic Sourcing'}
-                  </p>
-                  <p className="text-sm font-medium leading-snug">
-                    {lang === 'ta' ? 'உங்கள் ஐயர் கொடுத்த பட்டியலின்படி அனைத்து பொருட்களும் ஏற்பாடு செய்து தரப்படும்' : 'All required items arranged strictly per your priest material list'}
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 

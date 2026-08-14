@@ -78,51 +78,39 @@ export const MaterialsSection = ({ onSelectMaterial }) => {
 
         {/* Material Items Grid */}
         {displayedMaterials.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedMaterials.map((item) => {
               const name = item.name[lang];
               const desc = item.desc[lang];
 
               return (
-                <div key={item.id} className="card p-6 flex flex-col justify-between hover:border-saffron transition-all border border-color">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
-                        {lang === 'ta' ? 'இருப்பில் உள்ளது' : 'In Stock'}
-                      </span>
-                      <span className="text-xs font-semibold text-saffron flex items-center gap-1">
-                        <Tag className="w-3.5 h-3.5" />
-                        {t.buttons.contactUsPrice}
-                      </span>
-                    </div>
+                <div 
+                  key={item.id} 
+                  className="bg-white dark:bg-slate-900 rounded-2xl p-5 flex flex-col justify-between border border-amber-200/80 dark:border-amber-500/20 hover:border-amber-400 shadow-sm hover:shadow-md transition-all"
+                >
+                  <div className="space-y-2">
+                    <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-2.5 py-0.5 rounded-full inline-block">
+                      {lang === 'ta' ? 'பூஜை சாமான்கள்' : 'Pooja Essential'}
+                    </span>
 
-                    <h3 className="text-lg font-bold font-heading text-primary line-clamp-1">
+                    <h3 className="text-lg font-bold font-heading text-slate-900 dark:text-slate-100">
                       {name}
                     </h3>
                     
-                    <p className="text-xs text-secondary leading-relaxed line-clamp-2">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
                       {desc}
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2.5 pt-4 mt-4 border-t border-color">
-                    <button
-                      onClick={() => onSelectMaterial(item)}
-                      className="btn btn-outline text-xs py-2.5 px-3 flex-1 text-center"
-                    >
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>{t.buttons.viewDetails}</span>
-                    </button>
-
+                  <div className="flex items-center justify-between gap-3 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
                     <a
                       href={getWhatsAppUrl(item.whatsappMessage[lang])}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-whatsapp text-xs py-2.5 px-3 flex-1 text-center font-bold"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-xs transition-all w-full justify-center"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
-                      <span>{t.buttons.enquireWhatsApp}</span>
+                      <span>{lang === 'ta' ? 'WhatsApp-ல் வினவ' : 'Enquire on WhatsApp'}</span>
                     </a>
                   </div>
                 </div>

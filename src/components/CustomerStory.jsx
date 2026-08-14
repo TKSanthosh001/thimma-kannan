@@ -16,43 +16,75 @@ export const CustomerStory = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-secondary transition-colors border-b border-color">
-      <div className="max-w-7xl mx-auto px-6 space-y-16">
+    <section id="about" className="py-16 md:py-24 bg-amber-50/40 dark:bg-slate-900/40 transition-colors border-b border-slate-200 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto px-6">
         
-        {/* Editorial Story Header */}
+        {/* Editorial Story Layout: 1 Strong Image + Text + 3 Small Points */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-saffron block">
-              {t.about.subtitle}
-            </span>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-maroon dark:text-gold leading-tight">
-              {t.story.problemTitle}
-            </h2>
-
-            <p className="text-lg md:text-xl text-primary font-bold leading-relaxed bg-card p-6 rounded-2xl border-l-4 border-saffron shadow-sm">
-              {t.story.problemSubtitle}
-            </p>
-
-            <p className="text-base text-secondary leading-relaxed">
-              {t.about.p2}
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-saffron/30 group">
+          {/* Left: Strong Devotional Image */}
+          <div className="lg:col-span-5 relative order-2 lg:order-1">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-amber-200/80 dark:border-amber-500/20 bg-white p-2">
               <img
                 src={getImageUrl('/images/gruhapravesam_pooja.jpg')}
                 alt="Gruhapravesam Kalasam Pooja Setup"
-                className="w-full h-[360px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[320px] sm:h-[400px] object-cover rounded-xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
-                <p className="text-white text-xs font-semibold">
-                  {lang === 'ta' ? 'பாரம்பரிய பூஜா கலசம் & மங்கள பொருட்கள் ஏற்பாடு' : 'Traditional Kalasam & Ceremony Material Arrangements'}
-                </p>
+            </div>
+          </div>
+
+          {/* Right: Text & 3 Small Supporting Points */}
+          <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 block">
+              {lang === 'ta' ? 'எளிமையான தீர்வு' : 'Simple Solution'}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-maroon dark:text-gold leading-tight">
+              {lang === 'ta'
+                ? 'பல கடைகளில் தேடி வாங்க வேண்டிய சிரமம் வேண்டாம்.'
+                : 'No need to search across multiple shops.'}
+            </h2>
+
+            <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              {lang === 'ta'
+                ? 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
+                : 'Simply send the material list given by your Iyer / Priest on WhatsApp. We source all required items and pack everything together.'}
+            </p>
+
+            {/* 3 Very Small Supporting Points */}
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                  {lang === 'ta' ? 'ஐயர் கொடுத்த பட்டியலை அப்படியே அனுப்புங்கள்' : 'Send your exact priest list as provided'}
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                  {lang === 'ta' ? 'ஒவ்வொரு பொருளும் தனித்தனியாக பெயர் சீட்டுடன் பேக் செய்யப்படும்' : 'Every item is itemized and clearly labeled'}
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                  {lang === 'ta' ? 'மதுரையில் கடை கடையாக அலைய வேண்டிய டென்ஷன் இல்லை' : 'No running around multiple shops in Madurai'}
+                </span>
               </div>
             </div>
+
+            <div className="pt-2">
+              <a
+                href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-md transition-all"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>{lang === 'ta' ? 'WhatsApp-ல் பட்டியலை அனுப்புங்கள்' : 'Send List on WhatsApp'}</span>
+              </a>
+            </div>
+
           </div>
 
         </div>
