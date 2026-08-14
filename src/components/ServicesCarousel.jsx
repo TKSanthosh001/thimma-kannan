@@ -76,14 +76,14 @@ export const ServicesCarousel = ({ onSelectService }) => {
           <div className="flex items-center gap-3">
             <button
               onClick={prev}
-              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
+              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm flex items-center justify-center w-11 h-11"
               aria-label="Previous service"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={next}
-              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
+              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm flex items-center justify-center w-11 h-11"
               aria-label="Next service"
             >
               <ChevronRight className="w-6 h-6" />
@@ -104,7 +104,7 @@ export const ServicesCarousel = ({ onSelectService }) => {
               transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)`
             }}
           >
-            {servicesData.map((service) => {
+            {servicesData.map((service, idx) => {
               const title = service.title[lang];
               const shortDesc = service.shortDesc[lang];
               const imgPath = getImageUrl(service.image);
@@ -119,6 +119,10 @@ export const ServicesCarousel = ({ onSelectService }) => {
                       <img
                         src={imgPath}
                         alt={title}
+                        width="600"
+                        height="340"
+                        loading={idx < 3 ? "eager" : "lazy"}
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
@@ -136,7 +140,7 @@ export const ServicesCarousel = ({ onSelectService }) => {
                   <div className="p-6 md:p-7 pt-0 flex items-center gap-3">
                     <button
                       onClick={() => onSelectService(service)}
-                      className="btn btn-outline text-sm md:text-base py-3 px-4 flex-1 text-center font-bold"
+                      className="btn btn-outline text-sm md:text-base py-3 px-4 flex-1 text-center font-bold min-h-[44px]"
                     >
                       <Eye className="w-4 h-4" />
                       <span>{t.buttons.viewDetails}</span>
@@ -146,7 +150,7 @@ export const ServicesCarousel = ({ onSelectService }) => {
                       href={getWhatsAppUrl(service.whatsappMessage[lang])}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-whatsapp text-sm md:text-base py-3 px-4 flex-1 text-center font-extrabold"
+                      className="btn btn-whatsapp text-sm md:text-base py-3 px-4 flex-1 text-center font-extrabold min-h-[44px]"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>{t.nav.whatsappAction}</span>
@@ -164,7 +168,7 @@ export const ServicesCarousel = ({ onSelectService }) => {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-3 rounded-full transition-all ${
+              className={`h-3 rounded-full transition-all min-w-[12px] min-h-[12px] ${
                 currentIndex === idx ? 'w-9 bg-saffron' : 'w-3 bg-color hover:bg-saffron/50'
               }`}
               aria-label={`Go to slide ${idx + 1}`}

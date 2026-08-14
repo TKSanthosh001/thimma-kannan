@@ -96,7 +96,10 @@ export const Hero = () => {
               <img
                 src={getImageUrl('/images/hero_pooja_banner.jpg')}
                 alt="Thimma Kannan Traditional Pooja Material Arrangements"
+                width="900"
+                height="460"
                 fetchpriority="high"
+                decoding="async"
                 className="w-full h-[320px] sm:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>

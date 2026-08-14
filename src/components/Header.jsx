@@ -74,22 +74,22 @@ export const Header = () => {
       scrolled ? 'bg-main/95 backdrop-blur-md shadow-sm border-b border-color' : 'bg-main'
     }`}>
       <div className="h-1.5 bg-gradient-to-r from-maroon via-saffron to-maroon" />
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-3.5 px-6">
         
         {/* Brand Logo */}
         <a
           href="#home"
           onClick={(e) => scrollToSection(e, 'home')}
-          className="flex items-center gap-3 text-decoration-none group"
+          className="flex items-center gap-3 text-decoration-none group min-h-[44px]"
         >
-          <div className="w-11 h-11 rounded-full bg-maroon flex items-center justify-center text-gold shadow-md group-hover:scale-105 transition-transform">
-            <Flame className="w-6 h-6 text-amber-300" />
+          <div className="w-10 h-10 rounded-full bg-maroon flex items-center justify-center text-gold shadow-md group-hover:scale-105 transition-transform">
+            <Flame className="w-5 h-5 text-amber-300" />
           </div>
           <div>
-            <span className="text-xl md:text-2xl font-extrabold font-heading text-maroon dark:text-gold tracking-tight block leading-none">
+            <span className="text-lg md:text-xl font-extrabold font-heading text-maroon dark:text-gold tracking-tight block leading-none">
               {businessConfig.businessName[lang]}
             </span>
-            <span className="text-xs uppercase tracking-wider text-muted font-bold block mt-1">
+            <span className="text-[11px] uppercase tracking-wider text-muted font-bold block mt-1">
               {lang === 'ta' ? 'பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Arrangements'}
             </span>
           </div>
@@ -104,7 +104,7 @@ export const Header = () => {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => scrollToSection(e, link.id)}
-                className={`text-sm md:text-base font-bold tracking-wide transition-all py-1 ${
+                className={`text-sm md:text-base font-bold tracking-wide transition-all py-2 min-h-[44px] flex items-center ${
                   isActive
                     ? 'text-maroon dark:text-gold border-b-2 border-saffron font-extrabold'
                     : 'text-secondary hover:text-maroon dark:hover:text-gold'
@@ -120,8 +120,9 @@ export const Header = () => {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleLanguage}
-            className="px-3.5 py-2 rounded-md border border-color text-sm font-bold hover:border-saffron transition-all flex items-center gap-1.5 bg-card text-primary"
+            className="px-3.5 py-2 rounded-md border border-color text-sm font-bold hover:border-saffron transition-all flex items-center gap-1.5 bg-card text-primary min-h-[44px]"
             title="Switch Language / மொழியை மாற்றுக"
+            aria-label="Switch Language / மொழியை மாற்றுக"
           >
             <span className={lang === 'ta' ? 'text-saffron font-extrabold' : 'text-muted'}>தமிழ்</span>
             <span className="text-muted">|</span>
@@ -130,7 +131,7 @@ export const Header = () => {
 
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md border border-color hover:bg-secondary text-primary transition-all bg-card"
+            className="p-2.5 rounded-md border border-color hover:bg-secondary text-primary transition-all bg-card min-h-[44px] min-w-[44px] flex items-center justify-center"
             title="Toggle Light / Dark Mode"
             aria-label="Toggle Theme"
           >
@@ -141,7 +142,7 @@ export const Header = () => {
             href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp text-sm py-2.5 px-4.5 font-extrabold"
+            className="btn btn-whatsapp text-sm py-2.5 px-4.5 font-extrabold min-h-[44px]"
           >
             <MessageSquare className="w-4 h-4" />
             <span>{t.nav.whatsappAction}</span>
@@ -152,14 +153,15 @@ export const Header = () => {
         <div className="flex lg:hidden items-center gap-2">
           <button
             onClick={toggleLanguage}
-            className="px-3 py-1.5 rounded border border-color text-xs font-bold text-saffron bg-card"
+            className="px-3 py-2 rounded border border-color text-xs font-bold text-saffron bg-card min-h-[44px] flex items-center"
+            aria-label="Switch Language"
           >
             {lang === 'ta' ? 'EN' : 'தமிழ்'}
           </button>
 
           <button
             onClick={toggleTheme}
-            className="p-2 rounded border border-color text-primary bg-card"
+            className="p-2.5 rounded border border-color text-primary bg-card min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
@@ -167,10 +169,10 @@ export const Header = () => {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-primary focus:outline-none"
+            className="p-2.5 text-primary focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -187,7 +189,7 @@ export const Header = () => {
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className={`text-base py-2.5 font-bold border-b border-color ${
+                  className={`text-base py-3 font-bold border-b border-color flex items-center min-h-[44px] ${
                     isActive ? 'text-maroon dark:text-gold font-extrabold' : 'text-primary'
                   }`}
                 >
@@ -201,7 +203,7 @@ export const Header = () => {
                 href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp w-full text-center font-bold py-3.5 text-base"
+                className="btn btn-whatsapp w-full text-center font-bold py-3.5 text-base min-h-[48px]"
               >
                 <MessageSquare className="w-5 h-5" />
                 <span>{t.buttons.sendListWhatsApp}</span>

@@ -117,7 +117,7 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
-                className="btn btn-whatsapp w-full py-3 text-sm font-extrabold shadow-md flex items-center justify-center gap-2"
+                className="btn btn-whatsapp w-full py-3 text-sm font-extrabold shadow-md flex items-center justify-center gap-2 min-h-[48px]"
               >
                 <Send className="w-4 h-4" />
                 <span>{t.contact.submitBtn}</span>
@@ -149,7 +149,7 @@ export const ContactSection = () => {
                 {/* Phone */}
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-saffron flex-shrink-0" />
-                  <a href={`tel:${businessConfig.phone}`} className="font-extrabold text-primary hover:text-saffron transition-colors">
+                  <a href={`tel:${businessConfig.phone}`} className="font-extrabold text-primary hover:text-saffron transition-colors py-1 inline-block">
                     {businessConfig.phone}
                   </a>
                 </div>
@@ -161,7 +161,7 @@ export const ContactSection = () => {
                     href={getWhatsAppUrl(getFormWhatsAppMessage(formData, lang))}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-extrabold text-emerald-600 dark:text-emerald-400 hover:underline"
+                    className="font-extrabold text-emerald-600 dark:text-emerald-400 hover:underline py-1 inline-block"
                   >
                     +{businessConfig.whatsapp}
                   </a>
@@ -185,7 +185,7 @@ export const ContactSection = () => {
                   href={businessConfig.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs md:text-sm font-bold text-saffron hover:underline inline-flex items-center gap-1"
+                  className="text-xs md:text-sm font-bold text-saffron hover:underline inline-flex items-center gap-1 min-h-[44px] items-center"
                 >
                   <span>{lang === 'ta' ? 'கூகுள் மேப்பில் வழியைக் காண்க →' : 'View Directions on Google Maps →'}</span>
                 </a>
