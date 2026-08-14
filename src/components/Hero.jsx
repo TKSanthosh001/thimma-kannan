@@ -30,80 +30,74 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Text Narrative */}
+          {/* Left Narrative */}
           <div className="lg:col-span-7 space-y-8 text-left">
             
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-saffron/30 text-saffron text-xs md:text-sm font-bold uppercase tracking-wider">
-              <span>{lang === 'ta' ? 'பாரம்பரிய சடங்கு & பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Sourcing Service'}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-saffron/30 text-saffron text-sm md:text-base font-bold uppercase tracking-wider">
+              <span>{lang === 'ta' ? 'பாரம்பரிய சடங்கு & பூஜை பொருட்கள் ஏற்பாடு' : 'Ceremony Material Sourcing'}</span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading leading-[1.2] tracking-tight">
-              <span className="text-maroon block mb-2">{businessConfig.businessName[lang]}</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-primary leading-[1.2] tracking-tight">
+              <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
               <span className="text-primary font-bold block">
-                {lang === 'ta'
-                  ? 'உங்கள் பட்டியலை அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து தருகிறோம்.'
-                  : 'Send your list. We arrange all required materials.'}
+                {lang === 'ta' ? 'உங்கள் பட்டியலை அனுப்புங்கள். தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்கிறோம்.' : 'Send Us Your List. We\'ll Arrange What You Need.'}
               </span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="text-base md:text-xl text-secondary font-medium leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-2xl text-secondary font-semibold leading-relaxed max-w-2xl">
               {lang === 'ta'
                 ? 'Iyer / Priest கொடுத்த பொருட்கள் பட்டியலை WhatsApp-ல் அனுப்புங்கள். பட்டியலில் உள்ள தேவையான பொருட்களை நாங்கள் ஏற்பாடு செய்து, முறையாக தொகுத்து வழங்குகிறோம்.'
-                : 'Send the pooja material list given by your Iyer / Priest on WhatsApp. We source all required items, pack everything neatly, and have it ready for delivery or pickup.'}
+                : 'Send us the material list provided by your Iyer or priest. We arrange the required items according to your list, pack them together and make them ready for delivery or collection.'}
             </p>
 
-            {/* Primary Dominant CTA & Secondary Link */}
-            <div className="space-y-4 pt-2">
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-102 transition-all inline-flex items-center gap-3"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  <span>{lang === 'ta' ? 'WhatsApp-ல் பட்டியலை அனுப்புங்கள்' : 'Send List on WhatsApp'}</span>
-                </a>
+            {/* Single Primary CTA */}
+            <div className="flex flex-wrap items-center gap-5 pt-2">
+              <a
+                href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp text-base md:text-xl py-4.5 px-9 shadow-xl hover:scale-105 transition-transform font-extrabold"
+              >
+                <MessageSquare className="w-6 h-6" />
+                <span>{t.buttons.sendListWhatsApp}</span>
+              </a>
 
-                <a
-                  href="#services"
-                  onClick={scrollToServices}
-                  className="text-xs md:text-sm font-bold text-saffron hover:underline inline-flex items-center gap-1.5 py-3 px-2"
-                >
-                  <span>{lang === 'ta' ? 'சேவைகளைப் பார்க்க ↓' : 'View Services ↓'}</span>
-                </a>
+              <a
+                href="#services"
+                onClick={scrollToServices}
+                className="text-sm md:text-base font-bold text-saffron hover:underline inline-flex items-center gap-1.5 py-3 px-2"
+              >
+                <span>{lang === 'ta' ? 'எங்கள் சேவைகளைப் பார்க்க' : 'Explore Services'}</span>
+                <ArrowDown className="w-5 h-5" />
+              </a>
+            </div>
+
+            {/* 3 Quick Benefit Checks */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-color max-w-xl">
+              <div className="flex items-center gap-2 text-sm md:text-base font-semibold text-secondary">
+                <CheckCircle2 className="w-5 h-5 text-saffron flex-shrink-0" />
+                <span>{lang === 'ta' ? 'Priest பட்டியல் அனுப்பலாம்' : 'Send Priest List'}</span>
               </div>
-
-              {/* 3 Concise Benefit Checks */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-color max-w-xl">
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>{lang === 'ta' ? 'Iyer பட்டியல் அனுப்புங்கள்' : 'Send Priest List'}</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Source All Items'}</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>{lang === 'ta' ? 'Delivery / Collection' : 'Delivery & Pickup'}</span>
-                </div>
+              <div className="flex items-center gap-2 text-sm md:text-base font-semibold text-secondary">
+                <CheckCircle2 className="w-5 h-5 text-saffron flex-shrink-0" />
+                <span>{lang === 'ta' ? 'நாங்கள் ஏற்பாடு செய்கிறோம்' : 'We Source Items'}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm md:text-base font-semibold text-secondary">
+                <CheckCircle2 className="w-5 h-5 text-saffron flex-shrink-0" />
+                <span>{lang === 'ta' ? 'Delivery / Pickup' : 'Delivery & Pickup'}</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Single Strong Devotional Visual Image */}
+          {/* Right Devotional Image */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-amber-200/80 dark:border-amber-500/20 bg-white p-2">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-saffron/30 group">
               <img
                 src={getImageUrl('/images/hero_pooja_banner.jpg')}
-                alt="Thimma Kannan Traditional Pooja Setup"
+                alt="Thimma Kannan Traditional Pooja Material Arrangements"
                 fetchpriority="high"
-                className="w-full h-[340px] sm:h-[440px] object-cover rounded-xl"
+                className="w-full h-[360px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>
