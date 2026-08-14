@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Light Devotional Theme (Default) */
+  --bg-main: #FFFDF9;
+  --bg-card: #FFFFFF;
+  --bg-secondary: #FDF6EC;
+  --bg-tertiary: #F8ECE0;
+  
+  --text-primary: #2C1609;
+  --text-secondary: #5C4033;
+  --text-muted: #8C6D58;
+
+  --accent-maroon: #8B0000;
+  --accent-maroon-hover: #6D0000;
+  --accent-saffron: #D97706;
+  --accent-gold: #C59B27;
+  --accent-gold-light: #F7E7A9;
+
+  --border-color: #EADBC8;
+  --border-focus: #D97706;
+
+  --shadow-sm: 0 2px 4px rgba(60, 30, 10, 0.05);
+  --shadow-md: 0 4px 12px rgba(60, 30, 10, 0.08);
+  --shadow-lg: 0 8px 24px rgba(60, 30, 10, 0.12);
+
+  --font-heading: 'Cinzel', 'Noto Sans Tamil', serif;
+  --font-body: 'Outfit', 'Noto Sans Tamil', sans-serif;
+}
+
+.dark {
+  /* Dark Devotional Theme */
+  --bg-main: #140D07;
+  --bg-card: #1E150D;
+  --bg-secondary: #271C12;
+  --bg-tertiary: #322418;
+
+  --text-primary: #F5EBE0;
+  --text-secondary: #D4C3B3;
+  --text-muted: #A38F7E;
+
+  --accent-maroon: #B22222;
+  --accent-maroon-hover: #D32F2F;
+  --accent-saffron: #F59E0B;
+  --accent-gold: #E5C158;
+  --accent-gold-light: #4A3A1A;
+
+  --border-color: #3D2B1F;
+  --border-focus: #F59E0B;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Devotional Decorative Border & Gradient Top Bar */
+.devotional-top-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-maroon) 0%, var(--accent-saffron) 50%, var(--accent-gold) 100%);
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}
+
+.text-maroon { color: var(--accent-maroon); }
+.text-saffron { color: var(--accent-saffron); }
+.text-gold { color: var(--accent-gold); }
+
+/* Buttons & Interactive Elements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font-body);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-maroon) 0%, #A00000 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6D0000 0%, var(--accent-maroon) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 0, 0, 0.35);
+}
+
+.btn-saffron {
+  background: linear-gradient(135deg, var(--accent-saffron) 0%, #B45309 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.25);
+}
+
+.btn-saffron:hover {
+  background: linear-gradient(135deg, #B45309 0%, var(--accent-saffron) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+.btn-outline {
+  border-color: var(--accent-maroon);
+  color: var(--accent-maroon);
+  background: transparent;
+}
+
+.dark .btn-outline {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.btn-outline:hover {
+  background: var(--bg-secondary);
+}
+
+/* Cards & Layout */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-gold);
+}
+
+/* Glassmorphism Navigation */
+.glass-header {
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark .glass-header {
+  background: rgba(20, 13, 7, 0.92);
+}
+
+/* Floating WhatsApp Pulse Animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+  animation: pulse-ring 2.5s infinite;
+}
+
+/* Form Styles */
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+/* Responsive Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
