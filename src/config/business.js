@@ -14,8 +14,8 @@ export const businessConfig = {
   },
 
   // Contact Information
-  phone: '+91 98765 43210',
-  whatsapp: '919876543210',
+  phone: '+91 90434 61987',
+  whatsapp: '919043461987',
   email: 'contact@thimmakannan.com',
   address: {
     ta: '48B, சின்ன கடை தெரு, தெற்கு வாசல், மதுரை - 625001',
