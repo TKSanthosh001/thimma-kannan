@@ -1,30 +1,30 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ShieldCheck, Tag, Award, Truck, CheckCircle2 } from 'lucide-react';
+import { Clock, DollarSign, Smile, Tag, CheckCircle2 } from 'lucide-react';
 
 export const TrustBadgesBar = () => {
   const { lang } = useLanguage();
 
   const trustItems = [
     {
-      icon: ShieldCheck,
-      title: { ta: '100% தூய்மையான பொருட்கள்', en: '100% Pure Organic Quality' },
-      desc: { ta: 'சுத்தமான பசு நெய் & இயற்கை மூலிகைகள்', en: 'Pure cow ghee & natural herbal woods' }
+      icon: Clock,
+      title: { ta: 'துல்லியமான நேரத்திற்கு விநியோகம்', en: 'Guaranteed On-Time Delivery' },
+      desc: { ta: 'ஹோம நேரத்திற்கு முன்பே மதுரை முழுவதும் டெலிவரி', en: 'Punctual delivery across Madurai before ritual time' }
+    },
+    {
+      icon: DollarSign,
+      title: { ta: 'நியாயமான சந்தை விலை', en: 'Affordable Market Price' },
+      desc: { ta: 'சந்தை விலைக்கு ஏற்ற நியாயமான நியாய விலை', en: 'Reasonable, transparent market-matched rates' }
+    },
+    {
+      icon: Smile,
+      title: { ta: 'அலைச்சல் இல்லை, டென்ஷன் இல்லை', en: 'No Hassle, Zero Tension' },
+      desc: { ta: 'கடை கடையாக அலைய வேண்டாம், ஒரே WhatsApp மெசேஜ்', en: 'No running between multiple shops in Madurai' }
     },
     {
       icon: Tag,
       title: { ta: 'தனித்தனி பெயர் சீட்டு லேபிள்', en: 'Itemized Labeled Packing' },
-      desc: { ta: 'தமிழ் & ஆங்கிலத்தில் தெளிவான பெயர்கள்', en: 'Clear Tamil & English labels on every pack' }
-    },
-    {
-      icon: Award,
-      title: { ta: 'வேத விற்பன்னர்கள் சான்றளித்தது', en: 'Prescribed by Vedic Priests' },
-      desc: { ta: 'வாத்தியார் பட்டியல் படி 100% துல்லியம்', en: 'Strictly aligned with authentic Purohit lists' }
-    },
-    {
-      icon: Truck,
-      title: { ta: 'பொருட்களை பார்த்து பணம்', en: 'Pay After Inspection' },
-      desc: { ta: 'சரிபார்த்த பின் செலுத்துங்கள் / கடையில் பெறலாம்', en: 'Verify every item before payment' }
+      desc: { ta: 'வாத்தியார் பட்டியல் படி 100% துல்லிய பேக்கிங்', en: 'Checked line-by-line against your Purohit list' }
     }
   ];
 

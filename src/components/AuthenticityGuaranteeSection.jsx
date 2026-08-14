@@ -33,15 +33,15 @@ export const AuthenticityGuaranteeSection = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
             {lang === 'ta' ? (
-              <>ஏன் தமிழ்நாட்டு குடும்பங்கள் எங்களை <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">100% நம்புகிறார்கள்?</span></>
+              <>ஏன் மதுரை குடும்பங்கள் எங்களை <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">100% நம்புகிறார்கள்?</span></>
             ) : (
-              <>Why Families Trust <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">Thimma Kannan</span> 100%</>
+              <>Why Madurai Families Trust <span className="text-amber-600 underline decoration-amber-300 underline-offset-8">Thimma Kannan</span> 100%</>
             )}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
             {lang === 'ta'
-              ? 'பூஜை மற்றும் ஹோம சடங்குகளில் ஒரு சிறு பொருளின் தவறான தன்மையும் சடங்கை தாமதப்படுத்தும். எனவே ஒவ்வொரு பொருளையும் தூய்மையாகவும் துல்லியமாகவும் பேக் செய்கிறோம்.'
-              : 'In Vedic rituals, every material carries sacred vibration. We verify each ingredient line-by-line against authentic Priest checklists so your ceremony proceeds flawlessly.'}
+              ? 'மதுரையில் கடை கடையாக அலைந்து டென்ஷன் ஆக வேண்டிய அவசியமில்லை. சந்தை விலைக்கு ஏற்ற நியாயமான விலையில், ஹோம நேரத்திற்கு முன்பே துல்லியமான விநியோகம்!'
+              : 'No more running between multiple shops in Madurai! We deliver 100% accurate, priest-approved homam materials on time at fair, affordable market rates.'}
           </p>
         </div>
 
@@ -50,34 +50,34 @@ export const AuthenticityGuaranteeSection = () => {
           {[
             {
               step: '01',
-              title: { ta: 'இயற்கையான சமித்து விறகுகள்', en: '100% Natural Samithu Wood' },
+              title: { ta: 'துல்லியமான நேரத்திற்கு விநியோகம்', en: 'On-Time Delivery Guarantee' },
               desc: { 
-                ta: 'அரசு, ஆல, மா மற்றும் கருங்காலி போன்ற வேத சாஸ்திரப்படி அங்கீகரிக்கப்பட்ட உலர் விறகுகள் மட்டுமே வழங்கப்படுகின்றன.',
-                en: 'Strictly dry, sacred wood pieces (Peepal, Banyan, Mango) collected as per Vedic scriptures.' 
+                ta: 'பூஜை அல்லது ஹோமம் தொடங்கும் நேரத்திற்கு முன்பே மதுரை முழுவதும் உங்கள் முகவரிக்கு வந்து சேரும்.',
+                en: 'Punctual delivery across Madurai well before your ceremony start time.' 
               }
             },
             {
               step: '02',
-              title: { ta: 'சுத்தமான பசு நெய் & தானியங்கள்', en: 'Pure Cow Ghee & Unpolished Grains' },
+              title: { ta: 'நியாயமான சந்தை விலை', en: 'Reasonable Market Prices' },
               desc: { 
-                ta: 'கலப்படமற்ற நாட்டுப்பசு நெய், தரமான நவதானியங்கள் மற்றும் தூய்மையான தாம்பூல பொருட்கள்.',
-                en: 'Unadulterated pure cow ghee, premium Grade-A 9 grains, and fresh organic ritual essentials.' 
+                ta: 'சந்தை விலைக்கு ஏற்ற நியாயமான, வெளிப்படையான கட்டணம். அதிகப்படியான தொகைகள் எதுவுமில்லை.',
+                en: 'Fair, transparent pricing matched to everyday market rates without hidden costs.' 
               }
             },
             {
               step: '03',
-              title: { ta: 'தெளிவான பெயர் சீட்டு பேக்கிங்', en: 'Itemized Labeled Packing' },
+              title: { ta: 'அலைச்சல் இல்லை, டென்ஷன் இல்லை', en: 'Zero Hassle & No Stress' },
               desc: { 
-                ta: 'ஒவ்வொரு பொருளுக்கும் தமிழ் மற்றும் ஆங்கிலத்தில் பெயர் சீட்டு ஒட்டப்பட்டு தனித்தனியாக பேக் செய்யப்படும்.',
-                en: 'Every item is packed in individual transparent pouches clearly labeled in Tamil & English.' 
+                ta: 'வெயிலில் கடை கடையாக அலைய வேண்டாம். வாத்தியார் பட்டியலை WhatsApp செய்யுங்கள், மீதியை நாங்கள் பார்த்துக்கொள்கிறோம்.',
+                en: 'No running around shops in the heat. Just WhatsApp your priest list—we handle the rest.' 
               }
             },
             {
               step: '04',
-              title: { ta: 'பார்த்து சரிபார்த்த பின் கட்டணம்', en: 'Verify Items Before Payment' },
+              title: { ta: 'மதுரை தெற்கு வாசல் நேரில் சரிபார்ப்பு', en: 'South Gate Madurai Store Inspection' },
               desc: { 
-                ta: 'பொருட்களை உங்கள் வீட்டிற்கு விநியோகிக்கும்போது சரிபார்த்து திருப்தி அடைந்த பின் கட்டணம் செலுத்தலாம்.',
-                en: 'Pay after inspecting every item at your doorstep or directly at our South Gate Madurai store.' 
+                ta: 'எங்கள் தெற்கு வாசல் கடையில் நேரில் வந்தும் சரிபார்க்கலாம் அல்லது வீட்டிற்லேயே சரிபார்த்த பின் கட்டணம் செலுத்தலாம்.',
+                en: 'Inspect items directly at our South Gate Madurai store or verify at doorstep before payment.' 
               }
             }
           ].map((card, idx) => (
@@ -118,8 +118,8 @@ export const AuthenticityGuaranteeSection = () => {
 
               <blockquote className="text-base sm:text-xl font-medium italic text-amber-100 leading-relaxed">
                 {lang === 'ta'
-                  ? '“திம்மா கண்ணன் கடையில் நான் கொடுக்கும் ஹோமப் பட்டியலின் ஒவ்வொரு பொருளும் மிகத் தூய்மையாகவும், பெயர் சீட்டுடன் துல்லியமாகவும் பேக் செய்யப்படுகிறது. புரோகிதர்களுக்கும் குடும்பங்களுக்கும் மிகவும் நம்பிக்கையான கடை!”'
-                  : '“Every homam material list I prescribe is matched line-by-line with absolute purity and itemized Tamil/English labels by Thimma Kannan. Highly recommended for all traditional ceremonies.”'}
+                  ? '“மதுரை தெற்கு வாசல் திம்மா கண்ணன் கடையில் நான் கொடுக்கும் ஹோமப் பட்டியலின் ஒவ்வொரு பொருளும் மிகத் தூய்மையாகவும், நேரத்திற்கு முன்பே நியாயமான சந்தை விலையில் பேக் செய்யப்படுகிறது. அலைச்சல் இன்றி மதுரை மக்களுக்கு ஏற்ற சிறந்த சேவை!”'
+                  : '“Every homam material list I prescribe is matched line-by-line with absolute purity, fair market pricing, and punctual delivery by Thimma Kannan at South Gate, Madurai. Zero hassle for families!”'}
               </blockquote>
 
               <div>
@@ -127,7 +127,7 @@ export const AuthenticityGuaranteeSection = () => {
                   {lang === 'ta' ? 'சுப்ரமண்ய சாஸ்திரிகள் (வேத வாத்தியார்)' : 'Subramanya Sastrigal (Vedic Purohit)'}
                 </div>
                 <div className="text-xs text-slate-400">
-                  {lang === 'ta' ? 'மதுரை & சென்னை சுபகாரிய புரோகிதர்' : 'Traditional Vedic Priest - Madurai & Chennai'}
+                  {lang === 'ta' ? 'தெற்கு வாசல், மதுரை' : 'South Gate, Madurai'}
                 </div>
               </div>
             </div>
