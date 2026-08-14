@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14100E"/>
+      <stop offset="50%" stop-color="#241B17"/>
+      <stop offset="100%" stop-color="#120D0B"/>
+    </linearGradient>
+
+    <!-- Radial Glow for Single Lamp -->
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD166" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#F77F00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#14100E" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Flame Gradient -->
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E76F51"/>
+      <stop offset="40%" stop-color="#F4A261"/>
+      <stop offset="80%" stop-color="#E9C46A"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Brass Gradient -->
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="40%" stop-color="#AA7C11"/>
+      <stop offset="70%" stop-color="#E6CA65"/>
+      <stop offset="100%" stop-color="#78540B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Granite Floor Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- Subtle floor shadow line -->
+  <line x1="100" y1="520" x2="1100" y2="520" stroke="#000000" stroke-width="12" opacity="0.6" filter="blur(6px)"/>
+
+  <!-- Lamp Ambient Glow -->
+  <circle cx="600" cy="380" r="320" fill="url(#lampGlow)"/>
+
+  <!-- Traditional Single Brass Deepam Lamp (Left Side of Center) -->
+  <g transform="translate(480, 240)">
+    <!-- Base -->
+    <ellipse cx="0" cy="220" rx="70" ry="18" fill="url(#brassGrad)"/>
+    <rect x="-25" y="160" width="50" height="60" rx="8" fill="url(#brassGrad)"/>
+    <ellipse cx="0" cy="160" rx="40" ry="10" fill="url(#brassGrad)"/>
+    <rect x="-10" y="80" width="20" height="80" fill="url(#brassGrad)"/>
+    
+    <!-- Lamp Oil Plate -->
+    <ellipse cx="0" cy="80" rx="90" ry="25" fill="url(#brassGrad)"/>
+    <ellipse cx="0" cy="76" rx="80" ry="20" fill="#4A3408"/>
+
+    <!-- Cotton Wick -->
+    <path d="M 0 76 Q 0 55 0 45" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Single Devotional Flame -->
+    <path d="M 0 46 C -12 25, -8 10, 0 0 C 8 10, 12 25, 0 46 Z" fill="url(#flameGrad)"/>
+    <ellipse cx="0" cy="32" rx="4" ry="10" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Traditional Brass Vessel / Sombu (Right Side of Center) -->
+  <g transform="translate(720, 290)">
+    <!-- Base Shadow -->
+    <ellipse cx="0" cy="170" rx="85" ry="22" fill="#000000" opacity="0.7"/>
+
+    <!-- Brass Body -->
+    <path d="M -70 140 C -95 90, -85 30, -45 10 C -25 0, 25 0, 45 10 C 85 30, 95 90, 70 140 C 50 170, -50 170, -70 140 Z" fill="url(#brassGrad)"/>
+    <!-- Vessel Rim -->
+    <ellipse cx="0" cy="10" rx="55" ry="14" fill="url(#brassGrad)"/>
+    <ellipse cx="0" cy="8" rx="48" ry="10" fill="#3D2906"/>
+  </g>
+
+  <!-- Dharba Grass Blades (Sacred Grass) -->
+  <g transform="translate(630, 360)">
+    <path d="M 0 100 Q 20 40 40 -40" stroke="#8A7338" stroke-width="3" fill="none"/>
+    <path d="M -10 100 Q 5 30 20 -60" stroke="#75622C" stroke-width="3" fill="none"/>
+    <path d="M 10 100 Q 30 50 60 -20" stroke="#A38A45" stroke-width="3" fill="none"/>
+    <path d="M -20 100 Q -5 40 0 -50" stroke="#635222" stroke-width="3.5" fill="none"/>
+  </g>
+
+  <!-- Respectful Text Motif Overlay -->
+  <text x="600" y="590" text-anchor="middle" font-family="'Mukta Malar', 'Cinzel', serif" font-size="28" font-weight="700" fill="#D4AF37" letter-spacing="2" opacity="0.85">
+    காரியம் &amp; இறுதி சடங்கு பொருட்கள் ஏற்பாடு
+  </text>
+  <text x="600" y="625" text-anchor="middle" font-family="'Mukta Malar', sans-serif" font-size="16" fill="#A89474" opacity="0.7">
+    மரியாதைக்குரிய பாரம்பரிய சாஸ்திர சேவை
+  </text>
+</svg>
