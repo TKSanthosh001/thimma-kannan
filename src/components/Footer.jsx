@@ -39,7 +39,7 @@ export const Footer = () => {
                 {businessConfig.businessName[lang]}
               </h2>
             </div>
-            <p className="text-sm md:text-base text-secondary leading-relaxed font-medium">
+            <p className="text-base text-secondary leading-relaxed font-medium">
               {t.footer.desc}
             </p>
             <div className="pt-2">
@@ -60,7 +60,7 @@ export const Footer = () => {
             <h3 className="text-base md:text-lg font-bold font-heading text-primary mb-4 border-b border-color pb-2">
               {t.footer.quickLinks}
             </h3>
-            <ul className="space-y-3 text-sm md:text-base font-semibold">
+            <ul className="space-y-3 text-base font-semibold">
               <li>
                 <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="text-secondary hover:text-saffron transition-colors">{t.nav.home}</a>
               </li>
@@ -87,7 +87,7 @@ export const Footer = () => {
             <h3 className="text-base md:text-lg font-bold font-heading text-primary mb-4 border-b border-color pb-2">
               {t.footer.contactInfo}
             </h3>
-            <ul className="space-y-4 text-sm md:text-base text-secondary font-medium">
+            <ul className="space-y-4 text-base text-secondary font-medium">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
                 <a href={`tel:${businessConfig.phone}`} className="hover:text-saffron transition-colors font-bold text-primary">
@@ -121,7 +121,7 @@ export const Footer = () => {
             <h3 className="text-base md:text-lg font-bold font-heading text-primary mb-4 border-b border-color pb-2">
               {t.contact.locationTitle}
             </h3>
-            <div className="flex items-start gap-3 text-sm md:text-base text-secondary mb-4 leading-relaxed font-medium">
+            <div className="flex items-start gap-3 text-base text-secondary mb-4 leading-relaxed font-medium">
               <MapPin className="w-5 h-5 text-maroon dark:text-gold mt-1 flex-shrink-0" />
               <span>{businessConfig.address[lang]}</span>
             </div>
@@ -129,7 +129,7 @@ export const Footer = () => {
               href={businessConfig.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm md:text-base text-saffron hover:underline font-bold"
+              className="text-base text-saffron hover:underline font-bold"
             >
               {lang === 'ta' ? 'கூகுள் மேப்பில் வழியைக் காண்க →' : 'View Directions on Google Maps →'}
             </a>
