@@ -195,6 +195,18 @@ export const IyerHomamListResolver = () => {
           </div>
         </div>
 
+        {/* Tab Navigation Header for Standard Homam Lists */}
+        <div className="text-center mb-6">
+          <span className="inline-block px-3 py-1 bg-amber-100 text-amber-900 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+            {lang === 'ta' ? 'மாதிரிப் பட்டியல்கள் (பார்வைக்கு மட்டுமே)' : 'Sample Standard Checklists (For Reference Only)'}
+          </span>
+          <p className="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto">
+            {lang === 'ta'
+              ? '💡 குறிப்பு: ஒவ்வொரு வாத்தியாரின் பட்டியலும் சிறிதளவு மாறுபடலாம். உங்கள் வாத்தியார் கொடுத்த பட்டியலின்படி அளவுகள் மாற்றி பேக் செய்து தரப்படும்!'
+              : '💡 Note: Quantities may vary by priest. We customize items 100% according to your specific Purohit list!'}
+          </p>
+        </div>
+
         {/* Tab Navigation for Standard Homam Lists */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
           {homamListsData.map(list => {
@@ -224,7 +236,7 @@ export const IyerHomamListResolver = () => {
           <div className="bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 p-6 border-b border-amber-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="inline-block text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-200/80 px-2.5 py-0.5 rounded-full mb-1">
-                {currentList.badge}
+                {lang === 'ta' ? 'மாதிரி பட்டியல் / Sample Checklist' : currentList.badge}
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                 {currentList.title[lang]}
