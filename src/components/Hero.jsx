@@ -33,21 +33,25 @@ export const Hero = () => {
           {/* Left Text Narrative */}
           <div className="lg:col-span-7 space-y-8 text-left">
             
-            {/* Small Eyebrow */}
+            {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-saffron/30 text-saffron text-xs md:text-sm font-bold uppercase tracking-wider">
               <span>{lang === 'ta' ? 'பாரம்பரிய சடங்கு & பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Sourcing Service'}</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-primary leading-[1.15] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-primary leading-[1.18] tracking-tight">
               <span className="text-maroon dark:text-gold block mb-2">{businessConfig.businessName[lang]}</span>
-              <span className="text-primary font-bold">
+              <span className="text-primary font-bold block">
                 {t.tagline}
               </span>
             </h1>
 
-            {/* Supporting Paragraph */}
-            <p className="text-base md:text-xl text-secondary max-w-2xl leading-relaxed">
+            {/* Subheadline */}
+            <p className="text-lg md:text-2xl text-secondary font-semibold leading-relaxed">
+              {t.subTagline}
+            </p>
+
+            <p className="text-base md:text-lg text-muted leading-relaxed max-w-2xl">
               {t.heroSubtext}
             </p>
 
@@ -74,7 +78,7 @@ export const Hero = () => {
                 </a>
               </div>
 
-              {/* 3 Concise Benefit Checks under CTA */}
+              {/* 3 Concise Benefit Checks */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-color max-w-xl">
                 <div className="flex items-center gap-2 text-xs md:text-sm font-semibold text-secondary">
                   <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
@@ -93,7 +97,7 @@ export const Hero = () => {
 
           </div>
 
-          {/* Right Hero Visual Image */}
+          {/* Right Single Strong Devotional Visual Image */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-saffron/30 group">
               <img

@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { servicesData } from '../config/services';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getImageUrl } from '../utils/image';
-import { MessageSquare, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MessageSquare, ArrowRight } from 'lucide-react';
 
 export const ServicesSection = ({ onSelectService }) => {
   const { lang, t } = useLanguage();
@@ -25,7 +25,7 @@ export const ServicesSection = ({ onSelectService }) => {
           </p>
         </div>
 
-        {/* Editorial Services Grid */}
+        {/* 2x2 Large Editorial Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {servicesData.map((service) => {
             const title = service.title[lang];
@@ -40,8 +40,8 @@ export const ServicesSection = ({ onSelectService }) => {
                 className="bg-card flex flex-col justify-between rounded-3xl overflow-hidden border-2 border-color hover:border-saffron group shadow-md transition-all"
               >
                 <div>
-                  {/* Large Image Block */}
-                  <div className="relative h-64 sm:h-72 overflow-hidden">
+                  {/* Visually Larger Image */}
+                  <div className="relative h-72 sm:h-80 md:h-96 overflow-hidden">
                     <img
                       src={imgPath}
                       alt={title}
@@ -56,30 +56,18 @@ export const ServicesSection = ({ onSelectService }) => {
                     )}
                   </div>
 
-                  {/* Narrative Body */}
-                  <div className="p-8 space-y-4">
-                    <h3 className="text-2xl font-bold font-heading text-primary group-hover:text-maroon dark:group-hover:text-gold transition-colors">
+                  {/* Concise Narrative */}
+                  <div className="p-8 space-y-3">
+                    <h3 className="text-2xl md:text-3xl font-bold font-heading text-primary group-hover:text-maroon dark:group-hover:text-gold transition-colors">
                       {title}
                     </h3>
-                    <p className="text-sm md:text-base text-secondary leading-relaxed">
+                    <p className="text-base md:text-lg text-secondary leading-relaxed">
                       {shortDesc}
                     </p>
-
-                    {/* Includes Bullet Preview */}
-                    {service.includes && service.includes[lang] && (
-                      <div className="space-y-2 pt-2 border-t border-color">
-                        {service.includes[lang].slice(0, 2).map((item, idx) => (
-                          <div key={idx} className="flex items-center gap-2.5 text-xs md:text-sm text-muted">
-                            <CheckCircle2 className="w-4 h-4 text-saffron flex-shrink-0" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </div>
 
-                {/* Bottom Action Buttons */}
+                {/* Bottom Action Bar */}
                 <div className="p-8 pt-0 flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => onSelectService(service)}
@@ -96,7 +84,7 @@ export const ServicesSection = ({ onSelectService }) => {
                     className="btn btn-whatsapp text-xs md:text-sm py-3 px-5 font-bold inline-flex items-center gap-2"
                   >
                     <MessageSquare className="w-4 h-4" />
-                    <span>{lang === 'ta' ? 'பட்டியலை அனுப்புங்கள் →' : 'Send List →'}</span>
+                    <span>{t.buttons.sendListWhatsApp}</span>
                   </a>
                 </div>
               </div>
