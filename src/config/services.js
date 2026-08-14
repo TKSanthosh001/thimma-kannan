@@ -170,7 +170,7 @@ export const servicesData = [
       ta: 'துயரமான தருணத்தில் சிரமமின்றி சடங்கு சாமான்களைப் பெற உதவிகரமாக இருக்கிறோம். 1-ஆம் நாள் முதல் 16-ஆம் நாள் கருமாதி வரை சாஸ்திரிகள் கொடுக்கும் பட்டியலின்படி தேவையான அனைத்து பொருட்களும் ஏற்பாடு செய்யப்படும்.',
       en: 'Providing calm, hassle-free ritual material support during sorrowful times. All items requested by your priest for cremation, 16th-day Karumathi, or Thithi are arranged per your list.'
     },
-    image: '/images/funeral_rituals.svg',
+    image: '/images/funeral_rituals.jpg',
     badge: {
       ta: 'மரியாதைக்குரிய சேவை',
       en: 'Respectful Service'

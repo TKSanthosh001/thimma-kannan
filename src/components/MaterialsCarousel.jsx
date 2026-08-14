@@ -55,21 +55,21 @@ export const MaterialsCarousel = ({ onSelectMaterial }) => {
   };
 
   return (
-    <section id="materials" className="py-16 md:py-20 bg-main transition-colors border-b border-color">
+    <section id="materials" className="py-16 md:py-24 bg-main transition-colors border-b border-color">
       <div className="max-w-7xl mx-auto px-6 space-y-10">
         
         {/* Header & Nav Controls */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-saffron block">
+            <span className="text-sm font-extrabold uppercase tracking-wider text-saffron block">
               {lang === 'ta' ? 'பூஜை பொருட்கள் எடுத்துக்காட்டு' : 'Pooja Materials Examples'}
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-primary">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-primary">
               {lang === 'ta'
                 ? 'உங்கள் பட்டியலில் உள்ள பொருட்களை நாங்கள் ஏற்பாடு செய்கிறோம்'
                 : 'We Arrange Materials Required in Your List'}
             </h2>
-            <p className="text-sm text-secondary">
+            <p className="text-base md:text-lg text-secondary font-medium">
               {lang === 'ta'
                 ? 'பூஜை மற்றும் சடங்கு பொருட்களின் சில எடுத்துக்காட்டுகள்:'
                 : 'Informational showcase of ceremony items we source strictly per your list:'}
@@ -79,17 +79,17 @@ export const MaterialsCarousel = ({ onSelectMaterial }) => {
           <div className="flex items-center gap-3">
             <button
               onClick={prev}
-              className="p-3 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
+              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
               aria-label="Previous material"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={next}
-              className="p-3 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
+              className="p-3.5 rounded-full border border-color hover:border-saffron bg-card text-primary hover:text-maroon transition-all shadow-sm"
               aria-label="Next material"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -114,29 +114,29 @@ export const MaterialsCarousel = ({ onSelectMaterial }) => {
               return (
                 <div
                   key={item.id}
-                  className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-card rounded-2xl p-6 flex flex-col justify-between border border-color shadow-sm space-y-4 hover:border-saffron transition-all"
+                  className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-card rounded-3xl p-6 md:p-7 flex flex-col justify-between border border-color shadow-sm space-y-4 hover:border-saffron transition-all"
                 >
                   <div className="space-y-3">
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-saffron">
+                    <div className="flex items-center gap-2 text-xs md:text-sm font-bold text-saffron">
                       <FileText className="w-4 h-4" />
                       <span>{lang === 'ta' ? 'பட்டியலின்படி ஏற்பாடு' : 'Arranged Per List'}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold font-heading text-primary line-clamp-1">
+                    <h3 className="text-xl md:text-2xl font-bold font-heading text-primary line-clamp-1">
                       {name}
                     </h3>
 
-                    <p className="text-xs md:text-sm text-secondary leading-relaxed line-clamp-3">
+                    <p className="text-base text-secondary leading-relaxed font-medium">
                       {desc}
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2 pt-4 border-t border-color">
+                  <div className="flex items-center gap-3 pt-4 border-t border-color">
                     <button
                       onClick={() => onSelectMaterial(item)}
-                      className="btn btn-outline text-xs py-2.5 px-3 flex-1 text-center"
+                      className="btn btn-outline text-sm md:text-base py-3 px-4 flex-1 text-center font-bold"
                     >
-                      <Eye className="w-3.5 h-3.5" />
+                      <Eye className="w-4 h-4" />
                       <span>{lang === 'ta' ? 'விவரம்' : 'Details'}</span>
                     </button>
 
@@ -144,9 +144,9 @@ export const MaterialsCarousel = ({ onSelectMaterial }) => {
                       href={getWhatsAppUrl(item.whatsappMessage[lang])}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-whatsapp text-xs py-2.5 px-3 flex-1 text-center font-bold"
+                      className="btn btn-whatsapp text-sm md:text-base py-3 px-4 flex-1 text-center font-extrabold"
                     >
-                      <MessageSquare className="w-3.5 h-3.5" />
+                      <MessageSquare className="w-4 h-4" />
                       <span>{lang === 'ta' ? 'கேளுங்கள்' : 'Inquire'}</span>
                     </a>
                   </div>
@@ -162,8 +162,8 @@ export const MaterialsCarousel = ({ onSelectMaterial }) => {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all ${
-                currentIndex === idx ? 'w-8 bg-saffron' : 'w-2.5 bg-color hover:bg-saffron/50'
+              className={`h-3 rounded-full transition-all ${
+                currentIndex === idx ? 'w-9 bg-saffron' : 'w-3 bg-color hover:bg-saffron/50'
               }`}
               aria-label={`Go to material slide ${idx + 1}`}
             />

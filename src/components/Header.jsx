@@ -21,7 +21,7 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'services', 'how-it-works', 'packages', 'materials', 'why-choose', 'faq', 'contact'];
+    const sectionIds = ['home', 'what-we-do', 'services', 'how-it-works', 'materials', 'why-choose', 'faq', 'contact'];
     
     const observer = new IntersectionObserver(
       (entries) => {
@@ -62,7 +62,7 @@ export const Header = () => {
 
   const navLinks = [
     { id: 'home', label: t.nav.home },
-    { id: 'about', label: t.nav.about },
+    { id: 'what-we-do', label: t.nav.about },
     { id: 'services', label: t.nav.services },
     { id: 'how-it-works', label: t.nav.workflow },
     { id: 'materials', label: t.nav.materials },
@@ -82,22 +82,20 @@ export const Header = () => {
           onClick={(e) => scrollToSection(e, 'home')}
           className="flex items-center gap-3 text-decoration-none group"
         >
-          <div className="w-10 h-10 rounded-full bg-maroon flex items-center justify-center text-gold shadow-md group-hover:scale-105 transition-transform">
-            <Flame className="w-5 h-5 text-amber-300" />
+          <div className="w-11 h-11 rounded-full bg-maroon flex items-center justify-center text-gold shadow-md group-hover:scale-105 transition-transform">
+            <Flame className="w-6 h-6 text-amber-300" />
           </div>
           <div>
             <span className="text-xl md:text-2xl font-extrabold font-heading text-maroon dark:text-gold tracking-tight block leading-none">
               {businessConfig.businessName[lang]}
             </span>
-            <div className="flex items-center gap-1.5 mt-1">
-              <span className="text-[10px] uppercase tracking-wider text-muted font-medium block">
-                {lang === 'ta' ? 'மதுரை தெற்கு வாசல் • பூஜை சாமான்கள்' : 'South Gate, Madurai • Pooja Samagri'}
-              </span>
-            </div>
+            <span className="text-xs uppercase tracking-wider text-muted font-bold block mt-1">
+              {lang === 'ta' ? 'பூஜை பொருட்கள் ஏற்பாடு சேவை' : 'Ceremony Material Arrangements'}
+            </span>
           </div>
         </a>
 
-        {/* Desktop Anchor Navigation */}
+        {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
@@ -106,9 +104,9 @@ export const Header = () => {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => scrollToSection(e, link.id)}
-                className={`text-xs uppercase font-bold tracking-wider transition-all py-1 ${
+                className={`text-sm md:text-base font-bold tracking-wide transition-all py-1 ${
                   isActive
-                    ? 'text-maroon dark:text-gold border-b-2 border-saffron'
+                    ? 'text-maroon dark:text-gold border-b-2 border-saffron font-extrabold'
                     : 'text-secondary hover:text-maroon dark:hover:text-gold'
                 }`}
               >
@@ -120,10 +118,9 @@ export const Header = () => {
 
         {/* Right Actions: Lang, Theme, WhatsApp */}
         <div className="hidden lg:flex items-center gap-3">
-          {/* Language Toggle */}
           <button
             onClick={toggleLanguage}
-            className="px-3 py-1.5 rounded-md border border-color text-xs font-bold hover:border-saffron transition-all flex items-center gap-1 bg-card text-primary"
+            className="px-3.5 py-2 rounded-md border border-color text-sm font-bold hover:border-saffron transition-all flex items-center gap-1.5 bg-card text-primary"
             title="Switch Language / மொழியை மாற்றுக"
           >
             <span className={lang === 'ta' ? 'text-saffron font-extrabold' : 'text-muted'}>தமிழ்</span>
@@ -131,40 +128,38 @@ export const Header = () => {
             <span className={lang === 'en' ? 'text-saffron font-extrabold' : 'text-muted'}>EN</span>
           </button>
 
-          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-md border border-color hover:bg-secondary text-primary transition-all bg-card"
             title="Toggle Light / Dark Mode"
             aria-label="Toggle Theme"
           >
-            {theme === 'light' ? <Moon className="w-4 h-4 text-amber-800" /> : <Sun className="w-4 h-4 text-amber-400" />}
+            {theme === 'light' ? <Moon className="w-5 h-5 text-amber-800" /> : <Sun className="w-5 h-5 text-amber-400" />}
           </button>
 
-          {/* Quiet WhatsApp Link */}
           <a
             href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp text-xs py-2.5 px-4 font-bold"
+            className="btn btn-whatsapp text-sm py-2.5 px-4.5 font-extrabold"
           >
-            <MessageSquare className="w-3.5 h-3.5" />
+            <MessageSquare className="w-4 h-4" />
             <span>{t.nav.whatsappAction}</span>
           </a>
         </div>
 
-        {/* Mobile Header Buttons */}
+        {/* Mobile Header Controls */}
         <div className="flex lg:hidden items-center gap-2">
           <button
             onClick={toggleLanguage}
-            className="px-2.5 py-1 rounded border border-color text-xs font-bold text-saffron bg-card"
+            className="px-3 py-1.5 rounded border border-color text-xs font-bold text-saffron bg-card"
           >
             {lang === 'ta' ? 'EN' : 'தமிழ்'}
           </button>
 
           <button
             onClick={toggleTheme}
-            className="p-1.5 rounded border border-color text-primary bg-card"
+            className="p-2 rounded border border-color text-primary bg-card"
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
@@ -175,7 +170,7 @@ export const Header = () => {
             className="p-2 text-primary focus:outline-none"
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
@@ -192,8 +187,8 @@ export const Header = () => {
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className={`text-base py-2 font-semibold border-b border-color ${
-                    isActive ? 'text-maroon dark:text-gold font-bold' : 'text-primary'
+                  className={`text-base py-2.5 font-bold border-b border-color ${
+                    isActive ? 'text-maroon dark:text-gold font-extrabold' : 'text-primary'
                   }`}
                 >
                   {link.label}
@@ -206,7 +201,7 @@ export const Header = () => {
                 href={getWhatsAppUrl(getGeneralWhatsAppMessage(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-whatsapp w-full text-center font-bold py-3.5"
+                className="btn btn-whatsapp w-full text-center font-bold py-3.5 text-base"
               >
                 <MessageSquare className="w-5 h-5" />
                 <span>{t.buttons.sendListWhatsApp}</span>
