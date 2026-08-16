@@ -1,5 +1,5 @@
 export const generateLocalBusinessSchema = (lang = 'ta') => {
-  const siteUrl = 'https://tksanthosh001.github.io/thimma-kannan/';
+  const siteUrl = 'https://thimmakannanshop.netlify.app/';
 
   return {
     "@context": "https://schema.org",

@@ -4,13 +4,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://tksanthosh001.github.io/thimma-kannan/</loc>
+    <loc>https://thimmakannanshop.netlify.app/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://tksanthosh001.github.io/thimma-kannan/index.html</loc>
+    <loc>https://thimmakannanshop.netlify.app/index.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>

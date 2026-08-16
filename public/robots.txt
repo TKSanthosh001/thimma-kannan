@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tksanthosh001.github.io/thimma-kannan/sitemap.xml
+Sitemap: https://thimmakannanshop.netlify.app/sitemap.xml
